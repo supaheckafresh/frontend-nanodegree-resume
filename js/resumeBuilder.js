@@ -10,6 +10,16 @@ var bioPic = "https://s3.amazonaws.com/teacher-files-musicteachershelper-com/218
 var welcomeMsg = "hello and welcome to my humble abode.";
 var skills = ["awesomeness", "discipline", "patience", "management", "sales"];
 
+var title = "Owner / Guitar Instructor";
+var employer = "Neil's Guitar Pickin' Studio (self-employed)";
+var yearsWorked = "2013 - Present";
+var businessCity = "Exeter, CA";
+
+var school = "California Institute of the Arts";
+var degree = "BFA - Music Technology";
+var yearsAttended = "2003 - 2006";
+var schoolCity = "Valencia, CA";
+
 var bio = {
 	"name" : name,
 	"role" : role,
@@ -18,6 +28,20 @@ var bio = {
 	"welcomeMsg" : welcomeMsg,
 	"skills" : skills
 };
+
+var work = {
+};
+work.employer = employer;
+work.title = title;
+work.yearsWorked = yearsWorked;
+work.businessCity = businessCity;
+
+var education = {
+};
+education["school"] = school;
+education["degree"] = degree;
+education["yearsAttended"] = yearsAttended;
+education["schoolCity"] = schoolCity;
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -30,11 +54,19 @@ var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
 
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.employer);
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.title);
+
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").prepend(formattedbioPic);
 $("#header").append(formattedWelcomeMsg);
 $("#header").append(formattedSkills);
+
+$("#workExperience").append(HTMLworkEntry);
+$("#work-entry").prepend(formattedWorkTitle);
+$("#work-entry").prepend(formattedWorkEmployer);
+
 $("#footerContacts").append(formattedEmail);
 $("#footerContacts").append(formattedMobile);
 $("#footerContacts").append(formattedGithub);

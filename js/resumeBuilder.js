@@ -94,6 +94,12 @@ var projects = {
 			"dates" : "1983 - Present",
 			"description" : "",
 			"images" : []
+		},
+		{
+			"title" : "Cooking",
+			"dates" : "2001 - Present",
+			"description" : "",
+			"images" : []
 		}
 	]
 };

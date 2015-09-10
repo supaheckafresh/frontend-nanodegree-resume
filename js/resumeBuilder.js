@@ -1,86 +1,99 @@
-var name = "Neil Strain";
-var role = "Web Developer";
-var contacts = {
-	"mobile" : "(562)810-2501",
-	"email" : "neilstrain@gmail.com",
-	"github" : "https://github.com/supaheckafresh",
-	"location" : "Exeter, CA"
-};
-var bioPic = "https://s3.amazonaws.com/teacher-files-musicteachershelper-com/21871/neil.jpg";
-var welcomeMsg = "hello and welcome to my humble abode.";
-var skills = ["awesomeness", "discipline", "patience", "management", "sales"];
-
-var title = "Owner / Guitar Instructor";
-var employer = "Neil's Guitar Pickin' Studio (self-employed)";
-var yearsWorked = "2013 - Present";
-var workLocation = "Exeter, CA";
-
-var school = "California Institute of the Arts";
-var degree = "BFA - Music Technology";
-var schoolCity = "Valencia, CA";
-
 var bio = {
-	"name" : name,
-	"role" : role,
-	"contacts" : contacts,
-	"bioPic" : bioPic,
-	"welcomeMsg" : welcomeMsg,
-	"skills" : skills
+	"name" : "Neil Strain",
+	"role" : "Web Developer",
+	"welcomeMsg" : "Thanks for checking out my resume!",
+	"contacts" : {
+		"mobile" : "(562)810-2501",
+		"email" : "neilstrain@gmail.com",
+		"github" : "https://github.com/supaheckafresh",
+		"location" : "Exeter, CA"
+	},
+	"skills" : [
+		"Operations Management",
+		"Sales",
+		"Customer Service",
+		"Management",
+		"Strategy",
+		"Marketing"
+	]
 };
 
-var work = {};
-work.employer = employer;
-work.title = title;
-work.yearsWorked = yearsWorked;
-work.workLocation = workLocation;
+var work = {
+	"jobs" : [
+		{
+			"employer" : "Neil's Guitar Pickin' Studio (self-employed)",
+			"title" : "Owner / Guitar Instructor",
+			"location" : "Exeter, CA",
+			"dates" : "August 2013 - Present",
+			"description" : "Private guitar lessons"
+		},
+		{
+			"employer" : "Digital Waybill",
+			"title" : "Operations Manager",
+			"location" : "Santa Monica, CA",
+			"dates" : "October, 2009 - May, 2013", 
+			"description" : ""
+		},
+		{
+			"employer" : "Morgan Stanley Smith Barney",
+			"title" : "Financial Advisor",
+			"location" : "Long Beach, CA",
+			"dates" : "",
+			"description" : ""
+		}
+	]
+};
 
 var education = {
 	"schools" : [
 		{
-			"school" : school,
-			"location" : schoolCity,
-			"degree" : [degree]
+			"name" : "California Institute of the Arts",
+			"location" : "Valencia, CA",
+			"degree" : ["BFA - Music Technology"],
+			"url" : "https://calarts.edu/"
+		}
+	],
+	"onlineCourses" : [
+		{
+			"school" : "Udacity",
+			"title" : "Nanodegree - Intro to Programming",
+			"dates" : "Feb - July, 2015",
+			"url" : "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
 		},
 		{
 			"school" : "Udacity",
-			"location" : "Online",
-			"degree" : ["Nanodegree - Intro to Programming"]
+			"title" : "Nanodegree - Front-End Web Developer",
+			"dates" : "August, 2015 - Present",
+			"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 		}
-
 	]
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedSkills = HTMLskills.replace("%data%", bio.skills
-		.join('</span></li>\n<li class="flex-item"><span class="white-text">'));
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-
-var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.employer);
-var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.title);
-
-var formattedSchoolName = HTMLschoolName.replace("%data%", education.school);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").prepend(formattedbioPic);
-$("#header").append(formattedWelcomeMsg);
-$("#header").append(formattedSkills);
-
-$("#work-experience").append(HTMLworkStart);
-$("#work-experience").append(formattedWorkTitle);
-$("#work-experience").append(formattedWorkEmployer);
-
-$("#education").append(HTMLschoolStart);
-$("#education").append(formattedSchoolName);
-
-
-$("#footer-contacts").append(formattedEmail);
-$("#footer-contacts").append(formattedMobile);
-$("#footer-contacts").append(formattedGithub);
-$("#footer-contacts").append(formattedLocation);
+var projects = {
+	"projects" : [
+		{
+			"title" : "Composing and recording original music",
+			"dates" : "1997 - Present",
+			"description" : "",
+			"images" : []
+		},
+		{
+			"title" : "Playing guitar",
+			"dates" : "1991 - Present",
+			"description" : "",
+			"images" : []
+		},
+		{
+			"title" : "Refurbishing old furniture",
+			"dates" : "2011 - Present",
+			"description" : "",
+			"images" : []
+		},
+		{
+			"title" : "Painting and illustrating",
+			"dates" : "1983 - Present",
+			"description" : "",
+			"images" : []
+		}
+	]
+};

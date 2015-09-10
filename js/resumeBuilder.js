@@ -13,7 +13,7 @@ var skills = ["awesomeness", "discipline", "patience", "management", "sales"];
 var title = "Owner / Guitar Instructor";
 var employer = "Neil's Guitar Pickin' Studio (self-employed)";
 var yearsWorked = "2013 - Present";
-var businessCity = "Exeter, CA";
+var workLocation = "Exeter, CA";
 
 var school = "California Institute of the Arts";
 var degree = "BFA - Music Technology";
@@ -29,15 +29,13 @@ var bio = {
 	"skills" : skills
 };
 
-var work = {
-};
+var work = {};
 work.employer = employer;
 work.title = title;
 work.yearsWorked = yearsWorked;
-work.businessCity = businessCity;
+work.workLocation = workLocation;
 
-var education = {
-};
+var education = {};
 education["school"] = school;
 education["degree"] = degree;
 education["yearsAttended"] = yearsAttended;
@@ -57,17 +55,23 @@ var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
 var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.employer);
 var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.title);
 
+var formattedSchoolName = HTMLschoolName.replace("%data%", education.school);
+
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").prepend(formattedbioPic);
 $("#header").append(formattedWelcomeMsg);
 $("#header").append(formattedSkills);
 
-$("#workExperience").append(HTMLworkEntry);
-$("#work-entry").prepend(formattedWorkTitle);
-$("#work-entry").prepend(formattedWorkEmployer);
+$("#work-experience").append(HTMLworkStart);
+$("#work-experience").append(formattedWorkTitle);
+$("#work-experience").append(formattedWorkEmployer);
 
-$("#footerContacts").append(formattedEmail);
-$("#footerContacts").append(formattedMobile);
-$("#footerContacts").append(formattedGithub);
-$("#footerContacts").append(formattedLocation);
+$("#education").append(HTMLschoolStart);
+$("#education").append(formattedSchoolName);
+
+
+$("#footer-contacts").append(formattedEmail);
+$("#footer-contacts").append(formattedMobile);
+$("#footer-contacts").append(formattedGithub);
+$("#footer-contacts").append(formattedLocation);

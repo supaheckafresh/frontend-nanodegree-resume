@@ -32,14 +32,18 @@ var work = {
 			"title" : "Operations Manager",
 			"location" : "Santa Monica, CA",
 			"dates" : "October, 2009 - May, 2013", 
-			"description" : ""
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata."
 		},
 		{
 			"employer" : "Morgan Stanley Smith Barney",
 			"title" : "Financial Advisor",
 			"location" : "Long Beach, CA",
-			"dates" : "",
-			"description" : ""
+			"dates" : "January, 2006 - September, 2009",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata."
 		}
 	]
 };
@@ -74,31 +78,41 @@ var projects = {
 		{
 			"title" : "Composing and recording original music",
 			"dates" : "1997 - Present",
-			"description" : "",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Playing guitar",
 			"dates" : "1991 - Present",
-			"description" : "",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
-			"description" : "",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Painting and illustrating",
 			"dates" : "1983 - Present",
-			"description" : "",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Cooking",
 			"dates" : "2001 - Present",
-			"description" : "",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
+				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
+				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		}
 	]

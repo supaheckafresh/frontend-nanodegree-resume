@@ -17,7 +17,6 @@ var workLocation = "Exeter, CA";
 
 var school = "California Institute of the Arts";
 var degree = "BFA - Music Technology";
-var yearsAttended = "2003 - 2006";
 var schoolCity = "Valencia, CA";
 
 var bio = {
@@ -35,11 +34,21 @@ work.title = title;
 work.yearsWorked = yearsWorked;
 work.workLocation = workLocation;
 
-var education = {};
-education["school"] = school;
-education["degree"] = degree;
-education["yearsAttended"] = yearsAttended;
-education["schoolCity"] = schoolCity;
+var education = {
+	"schools" : [
+		{
+			"school" : school,
+			"location" : schoolCity,
+			"degree" : [degree]
+		},
+		{
+			"school" : "Udacity",
+			"location" : "Online",
+			"degree" : ["Nanodegree - Intro to Programming"]
+		}
+
+	]
+};
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);

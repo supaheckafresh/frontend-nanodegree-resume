@@ -23,22 +23,22 @@ var work = {
 		{
 			"employer" : "Neil's Guitar Pickin' Studio (self-employed)",
 			"title" : "Owner / Guitar Instructor",
-			"location" : "Exeter, CA",
 			"dates" : "August 2013 - Present",
+			"location" : "Exeter, CA",
 			"description" : "Private guitar lessons"
 		},
 		{
 			"employer" : "Digital Waybill",
 			"title" : "Operations Manager",
+			"dates" : "October, 2009 - May, 2013",
 			"location" : "Santa Monica, CA",
-			"dates" : "October, 2009 - May, 2013", 
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata."
 		},
 		{
 			"employer" : "Morgan Stanley Smith Barney",
 			"title" : "Financial Advisor",
-			"location" : "Long Beach, CA",
 			"dates" : "January, 2006 - September, 2009",
+			"location" : "Long Beach, CA",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata."
 		}
 	]
@@ -122,10 +122,21 @@ if(bio.skills.length > 0) {
 
 if(work.jobs.length > 0) {
 	for(jobIndex in work.jobs) {
+		var eachJob = work.jobs[jobIndex];
+
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[jobIndex].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[jobIndex].title);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", eachJob.employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", eachJob.title);
 		$(".work-entry:last").append(formattedEmployer + formattedTitle);
+
+		var formattedDates = HTMLworkDates.replace("%data%", eachJob.dates);
+		$(".work-entry:last").append(formattedDates);
+
+		var formattedLocation = HTMLworkLocation.replace("%data%", eachJob.location);
+		$(".work-entry:last").append(formattedLocation);
+
+		var formattedDescription = HTMLworkDescription.replace("%data%", eachJob.description);
+		$(".work-entry:last").append(formattedDescription);
 	}
 }

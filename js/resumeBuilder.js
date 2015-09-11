@@ -121,11 +121,11 @@ if(bio.skills.length > 0) {
 }
 
 if(work.jobs.length > 0) {
-	for(job in work.jobs) {
+	for(jobIndex in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[jobIndex].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[jobIndex].title);
 		$(".work-entry:last").append(formattedEmployer + formattedTitle);
 	}
 }

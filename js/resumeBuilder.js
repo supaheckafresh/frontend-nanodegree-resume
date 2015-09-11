@@ -32,18 +32,14 @@ var work = {
 			"title" : "Operations Manager",
 			"location" : "Santa Monica, CA",
 			"dates" : "October, 2009 - May, 2013", 
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata."
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata."
 		},
 		{
 			"employer" : "Morgan Stanley Smith Barney",
 			"title" : "Financial Advisor",
 			"location" : "Long Beach, CA",
 			"dates" : "January, 2006 - September, 2009",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata."
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata."
 		}
 	]
 };
@@ -78,42 +74,48 @@ var projects = {
 		{
 			"title" : "Composing and recording original music",
 			"dates" : "1997 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Playing guitar",
 			"dates" : "1991 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Painting and illustrating",
 			"dates" : "1983 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		},
 		{
 			"title" : "Cooking",
 			"dates" : "2001 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis 
-				aeterno cum, cu sit offendit interpretaris. Dicant animal verterem 
-				eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
+			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : []
 		}
 	]
 };
+
+if(bio.name.length > 0 && bio.role.length > 0) {
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").prepend(formattedRole);
+	$("#header").prepend(formattedName);
+}
+
+if(bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+
+	for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
+		$("#skills").append(formattedSkill);
+	}
+}

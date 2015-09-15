@@ -196,3 +196,9 @@ function locationizer(work) {
     }
     return locations;
 }
+
+function displayMap() {
+	$("#mapDiv").append(googleMap);
+}
+
+displayMap();

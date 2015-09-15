@@ -109,6 +109,8 @@ if(bio.name.length > 0 && bio.role.length > 0) {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
+
+	displayInternationalizeButton();
 }
 
 if(bio.skills.length > 0) {
@@ -118,6 +120,10 @@ if(bio.skills.length > 0) {
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
 		$("#skills").append(formattedSkill);
 	}
+}
+
+function displayInternationalizeButton() {
+	$("#main").append(internationalizeButton);
 }
 
 function displayWork() {

@@ -120,9 +120,9 @@ if(bio.skills.length > 0) {
 	}
 }
 
-var displayWork = function() {
+function displayWork() {
 	if(work.jobs.length > 0) {
-		for(jobIndex in work.jobs) {
+		for(var jobIndex in work.jobs) {
 			var eachJob = work.jobs[jobIndex];
 
 			$("#workExperience").append(HTMLworkStart);
@@ -144,3 +144,12 @@ var displayWork = function() {
 }
 
 displayWork();
+
+function locationizer(work) {
+    var locations = [];
+    for (var job in work.jobs) {
+        var thisLocation = work.jobs[job].location;
+        locations.push(thisLocation);
+    }
+    return locations;
+}

@@ -75,31 +75,31 @@ var projects = {
 			"title" : "Composing and recording original music",
 			"dates" : "1997 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : []
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Playing guitar",
 			"dates" : "1991 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : []
+			"images" : ["http://lorempixel.com/nature/400/200"]
 		},
 		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : []
+			"images" : ["http://lorempixel.com/sports/400/200"]
 		},
 		{
 			"title" : "Painting and illustrating",
 			"dates" : "1983 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : []
+			"images" : ["http://lorempixel.com/abstract/400/200"]
 		},
 		{
 			"title" : "Cooking",
 			"dates" : "2001 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : []
+			"images" : ["http://lorempixel.com/people/400/200"]
 		}
 	]
 };
@@ -158,6 +158,33 @@ function displayWork() {
 }
 
 displayWork();
+
+projects.display = function() {
+	if(projects.projects.length > 0) {
+		for(var projIndex in projects.projects) {
+			var eachProj = projects.projects[projIndex];
+
+			$("#projects").append(HTMLprojectStart);
+
+			var formattedTitle = HTMLprojectTitle.replace("%data%", eachProj.title);
+			$(".project-entry:last").append(formattedTitle);
+
+			var formattedDates = HTMLprojectDates.replace("%data%", eachProj.dates);
+			$(".project-entry:last").append(formattedDates);
+
+			var formattedDesc = HTMLprojectDescription.replace("%data%", eachProj.description);
+			$(".project-entry:last").append(formattedDesc);
+
+			for(var imageIndex in eachProj.images) {
+				var image = eachProj.images[imageIndex];
+				var formattedImage = HTMLprojectImage.replace("%data%", image);
+				$(".project-entry:last").append(formattedImage);
+			}
+		}
+	}
+};
+
+projects.display();
 
 function locationizer(work) {
     var locations = [];

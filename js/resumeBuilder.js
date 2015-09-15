@@ -104,23 +104,31 @@ var projects = {
 	]
 };
 
-if(bio.name.length > 0 && bio.role.length > 0) {
-	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-	var formattedName = HTMLheaderName.replace("%data%", bio.name);
-	$("#header").prepend(formattedRole);
-	$("#header").prepend(formattedName);
+function displayHeader() {
+	if(bio.name.length > 0 && bio.role.length > 0) {
+		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+		var formattedName = HTMLheaderName.replace("%data%", bio.name);
+		$("#header").prepend(formattedRole);
+		$("#header").prepend(formattedName);
 
-	displayInternationalizeButton();
-}
-
-if(bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-
-	for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
-		$("#skills").append(formattedSkill);
+		displayInternationalizeButton();
 	}
 }
+
+displayHeader();
+
+function displaySkills() {
+	if(bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+
+		for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
+			var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
+			$("#skills").append(formattedSkill);
+		}
+	}
+}
+
+displaySkills();
 
 function displayInternationalizeButton() {
 	$("#main").append(internationalizeButton);

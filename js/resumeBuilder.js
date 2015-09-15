@@ -175,10 +175,12 @@ projects.display = function() {
 			var formattedDesc = HTMLprojectDescription.replace("%data%", eachProj.description);
 			$(".project-entry:last").append(formattedDesc);
 
-			for(var imageIndex in eachProj.images) {
-				var image = eachProj.images[imageIndex];
-				var formattedImage = HTMLprojectImage.replace("%data%", image);
-				$(".project-entry:last").append(formattedImage);
+			if (eachProj.images.length > 0) {
+				for(var imageIndex in eachProj.images) {
+					var image = eachProj.images[imageIndex];
+					var formattedImage = HTMLprojectImage.replace("%data%", image);
+					$(".project-entry:last").append(formattedImage);
+				}
 			}
 		}
 	}

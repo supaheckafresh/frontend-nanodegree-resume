@@ -72,9 +72,8 @@ function inName(name) {
 
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName() || function(){};
+    var iName = inName($("#name").text()) || function(){};
     $('#name').html(iName);
-    console.log(iName);
   });
 });
 

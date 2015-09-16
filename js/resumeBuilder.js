@@ -116,7 +116,7 @@ var otherLocations = {
 	]
 };
 
-bio.displayHeader = function() {
+bio.display = function() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
 
 		if(bio.bioPic.length > 0) {
@@ -125,84 +125,87 @@ bio.displayHeader = function() {
 		}
 
 		if(bio.welcomeMsg.length > 0) {
-					var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-					$("#header").prepend(formattedWelcomeMsg);
-				}
+			var formattedWelcomeMsg =
+				HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+			prependToPage(formattedWelcomeMsg, "#header");
+		}
 
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
-		$("#header").prepend(formattedRole);
-		$("#header").prepend(formattedName);
+		prependToPage(formattedRole, "#header");
+		prependToPage(formattedName, "#header");
 
 		displayInternationalizeButton();
+
+		bio.displaySkills();
 	}
 };
 
-bio.displayHeader();
+bio.display();
 
-function displaySkills() {
+bio.displaySkills = function() {
 	if(bio.skills.length > 0) {
-		$("#header").append(HTMLskillsStart);
+		appendToPage(HTMLskillsStart, "#header");
 
 		for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
 			var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
-			$("#skills").append(formattedSkill);
+			appendToPage(formattedSkill, "#skills");
 		}
 	}
-}
-
-displaySkills();
+};
 
 function displayInternationalizeButton() {
-	$("#main").append(internationalizeButton);
+	appendToPage(internationalizeButton, "#main");
 }
 
-function displayWork() {
+work.display = function() {
 	if(work.jobs.length > 0) {
 		for(var jobIndex in work.jobs) {
 			var eachJob = work.jobs[jobIndex];
 
-			$("#workExperience").append(HTMLworkStart);
+			appendToPage(HTMLworkStart, "#workExperience");
 
 			var formattedEmployer = HTMLworkEmployer.replace("%data%", eachJob.employer);
 			var formattedTitle = HTMLworkTitle.replace("%data%", eachJob.title);
-			$(".work-entry:last").append(formattedEmployer + formattedTitle);
+			appendToPage(formattedEmployer + formattedTitle, ".work-entry:last");
 
 			var formattedDates = HTMLworkDates.replace("%data%", eachJob.dates);
-			$(".work-entry:last").append(formattedDates);
+			appendToPage(formattedDates, ".work-entry:last");
 
 			var formattedLocation = HTMLworkLocation.replace("%data%", eachJob.location);
-			$(".work-entry:last").append(formattedLocation);
+			appendToPage(formattedLocation, ".work-entry:last");
 
-			var formattedDescription = HTMLworkDescription.replace("%data%", eachJob.description);
-			$(".work-entry:last").append(formattedDescription);
+			var formattedDescription =
+				HTMLworkDescription.replace("%data%", eachJob.description);
+			appendToPage(formattedDescription, ".work-entry:last");
 		}
 	}
-}
+};
 
-displayWork();
+work.display();
 
 projects.display = function() {
 	if(projects.projects.length > 0) {
 		for(var projIndex in projects.projects) {
 			var eachProj = projects.projects[projIndex];
 
-			$("#projects").append(HTMLprojectStart);
+			appendToPage(HTMLprojectStart, "#projects");
 
 			var formattedTitle = HTMLprojectTitle.replace("%data%", eachProj.title);
-			$(".project-entry:last").append(formattedTitle);
+			appendToPage(formattedTitle, ".project-entry:last");
 
 			var formattedDates = HTMLprojectDates.replace("%data%", eachProj.dates);
-			$(".project-entry:last").append(formattedDates);
+			appendToPage(formattedDates, ".project-entry:last");
 
-			var formattedDesc = HTMLprojectDescription.replace("%data%", eachProj.description);
-			$(".project-entry:last").append(formattedDesc);
+			var formattedDesc =
+				HTMLprojectDescription.replace("%data%", eachProj.description);
+			appendToPage(formattedDesc, ".project-entry:last");
 
 			if (eachProj.images.length > 0) {
 				for(var imageIndex in eachProj.images) {
 					var image = eachProj.images[imageIndex];
 					var formattedImage = HTMLprojectImage.replace("%data%", image);
-					$(".project-entry:last").append(formattedImage);
+					appendToPage(formattedImage, ".project-entry:last");
 				}
 			}
 		}
@@ -211,17 +214,8 @@ projects.display = function() {
 
 projects.display();
 
-function locationizer(work) {
-    var locations = [];
-    for (var job in work.jobs) {
-        var thisLocation = work.jobs[job].location;
-        locations.push(thisLocation);
-    }
-    return locations;
-}
-
 function displayMap() {
-	$("#mapDiv").append(googleMap);
+	appendToPage(googleMap, "#mapDiv");
 }
 
 displayMap();

@@ -13,6 +13,7 @@ var bio = {
 		"JavaScript",
 		"Python",
 		"Java",
+		"jQuery",
 		"CSS",
 		"HTML5",
 		"Bootstrap",

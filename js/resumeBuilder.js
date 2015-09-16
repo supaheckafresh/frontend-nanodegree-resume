@@ -238,20 +238,35 @@ work.display();
 
 education.display = function() {
 	if(education.schools.length > 0) {
+		appendToPage(HTMLschoolStart, "#education");
 		for(var schoolIndex in education.schools) {
 			var school = education.schools[schoolIndex];
 			var formattedName = HTMLschoolName.replace("%data%", school.name);
-			var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
 			var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+			var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
 			var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
-			var formattedUrl = HTMLschoolUrl.replace("%data%", school.url);
 
-			appendToPage(HTMLschoolStart, "#education");
 			appendToPage(formattedName +
-				formattedLocation +
 				formattedDegree +
-				formattedDates +
-				formattedUrl, ".education-entry:last");
+				formattedLocation +
+				formattedDates, ".education-entry:last");
+		}
+	}
+
+	if(education.onlineCourses.length > 0) {
+		appendToPage(HTMLonlineSchoolStart, "#onlineCourses");
+		for(var courseIndex in education.onlineCourses) {
+			var course = education.onlineCourses[courseIndex];
+			var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
+			var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+			var formattedOnlineDates =
+				HTMLonlineDates.replace("%data%", course.dates);
+			var formattedURL = HTMLonlineURL.replace("%data%", course.url);
+
+			appendToPage(formattedTitle +
+				formattedSchool +
+				formattedOnlineDates +
+				formattedURL, ".online-education-entry:last");
 		}
 	}
 };

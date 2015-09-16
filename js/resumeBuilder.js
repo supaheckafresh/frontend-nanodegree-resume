@@ -10,6 +10,17 @@ var bio = {
 		"location" : "Exeter, CA"
 	},
 	"skills" : [
+		"JavaScript",
+		"Python",
+		"Java",
+		"CSS",
+		"HTML5",
+		"Bootstrap",
+		"Object-Oriented Programming",
+		"Jinja2",
+		"SQLite",
+		"Git/GitHub",
+		"Web Apps",
 		"Operations Management",
 		"Sales",
 		"Customer Service",

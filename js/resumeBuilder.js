@@ -119,15 +119,15 @@ var otherLocations = {
 bio.display = function() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
 
-		if(bio.bioPic.length > 0) {
-			var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-			prependToPage(formattedBioPic, "#header");
-		}
-
 		if(bio.welcomeMsg.length > 0) {
 			var formattedWelcomeMsg =
 				HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
 			prependToPage(formattedWelcomeMsg, "#header");
+		}
+
+		if(bio.bioPic.length > 0) {
+			var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+			prependToPage(formattedBioPic, "#header");
 		}
 
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -135,12 +135,27 @@ bio.display = function() {
 		prependToPage(formattedRole, "#header");
 		prependToPage(formattedName, "#header");
 
+		displayContacts();
 		displaySkills();
 		displayInternationalizeButton();
 	}
 };
 
 bio.display();
+
+function displayContacts() {
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedLocation =
+		HTMLlocation.replace("%data%", bio.contacts.location);
+
+	appendToPage(
+		formattedMobile +
+		formattedEmail +
+		formattedGithub +
+		formattedLocation, "#topContacts");
+}
 
 function displaySkills() {
 	if(bio.skills.length > 0) {

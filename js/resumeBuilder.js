@@ -2,6 +2,7 @@ var bio = {
 	"name" : "Neil Strain",
 	"role" : "Web Developer",
 	"welcomeMsg" : "Thanks for checking out my resume!",
+	"bioPic" : "http://lorempixel.com/150/150",
 	"contacts" : {
 		"mobile" : "(562)810-2501",
 		"email" : "neilstrain@gmail.com",
@@ -117,6 +118,11 @@ var otherLocations = {
 
 bio.displayHeader = function() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
+
+		if(bio.bioPic.length > 0) {
+			var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+			prependToPage(formattedBioPic, "#header");
+		}
 
 		if(bio.welcomeMsg.length > 0) {
 					var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);

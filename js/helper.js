@@ -254,3 +254,13 @@ window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
  map.fitBounds(mapBounds);
 });
+
+//Neil's new helper functions:
+
+function appendToPage(content, htmlElement) {
+  $(htmlElement).append(content);
+}
+
+function prependToPage(content, htmlElement) {
+  $(htmlElement).prepend(content);
+}

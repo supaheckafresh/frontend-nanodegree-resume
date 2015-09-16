@@ -63,6 +63,7 @@ var education = {
 			"name" : "California Institute of the Arts",
 			"location" : "Valencia, CA",
 			"degree" : ["BFA - Music Technology"],
+			"dates" : "September, 2003 - December, 2006",
 			"url" : "https://calarts.edu/"
 		}
 	],
@@ -207,6 +208,7 @@ function displayInternationalizeButton() {
 	appendToPage(internationalizeButton, "#main");
 }
 
+
 work.display = function() {
 	if(work.jobs.length > 0) {
 		for(var jobIndex in work.jobs) {
@@ -233,6 +235,30 @@ work.display = function() {
 
 work.display();
 
+
+education.display = function() {
+	if(education.schools.length > 0) {
+		for(var schoolIndex in education.schools) {
+			var school = education.schools[schoolIndex];
+			var formattedName = HTMLschoolName.replace("%data%", school.name);
+			var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
+			var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+			var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+			var formattedUrl = HTMLschoolUrl.replace("%data%", school.url);
+
+			appendToPage(HTMLschoolStart, "#education");
+			appendToPage(formattedName +
+				formattedLocation +
+				formattedDegree +
+				formattedDates +
+				formattedUrl, ".education-entry:last");
+		}
+	}
+};
+
+education.display();
+
+
 projects.display = function() {
 	if(projects.projects.length > 0) {
 		for(var projIndex in projects.projects) {
@@ -250,7 +276,7 @@ projects.display = function() {
 				HTMLprojectDescription.replace("%data%", eachProj.description);
 			appendToPage(formattedDesc, ".project-entry:last");
 
-			if (eachProj.images.length > 0) {
+			if(eachProj.images.length > 0) {
 				for(var imageIndex in eachProj.images) {
 					var image = eachProj.images[imageIndex];
 					var formattedImage = HTMLprojectImage.replace("%data%", image);
@@ -262,6 +288,7 @@ projects.display = function() {
 };
 
 projects.display();
+
 
 function displayMap() {
 	appendToPage(googleMap, "#mapDiv");

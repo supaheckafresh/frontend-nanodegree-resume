@@ -115,8 +115,14 @@ var otherLocations = {
 	]
 };
 
-function displayHeader() {
+bio.displayHeader = function() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
+
+		if(bio.welcomeMsg.length > 0) {
+					var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+					$("#header").prepend(formattedWelcomeMsg);
+				}
+
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		$("#header").prepend(formattedRole);
@@ -124,9 +130,9 @@ function displayHeader() {
 
 		displayInternationalizeButton();
 	}
-}
+};
 
-displayHeader();
+bio.displayHeader();
 
 function displaySkills() {
 	if(bio.skills.length > 0) {

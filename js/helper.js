@@ -55,6 +55,12 @@ var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
+var HTMLvolunteeringStart = '<div class="volunteering-entry"></div>';
+var HTMLvolunteeringTitle = '<a href="#">%data%</a>';
+var HTMLvolunteeringDates = '<div class="date-text">%data%</div>';
+var HTMLvolunteeringLocation = '<div class="location-text">%data%</div>';
+var HTMLvolunteeringDescription = '<p><br/>%data%</p>';
+
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 

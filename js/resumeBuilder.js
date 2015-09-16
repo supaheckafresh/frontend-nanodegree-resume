@@ -104,6 +104,17 @@ var projects = {
 	]
 };
 
+var otherLocations = {
+	"locations" : [
+		"Oceanside, CA",
+		"Chicago, IL",
+		"Hammond, IN",
+		"San Mateo, CA",
+		"Redwood City, CA",
+		"Davis, CA"
+	]
+};
+
 function displayHeader() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);

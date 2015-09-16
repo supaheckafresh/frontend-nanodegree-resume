@@ -148,6 +148,10 @@ function initializeMap() {
       locations.push(work.jobs[job].location);
     }
 
+    for (var location in otherLocations.locations) {
+      locations.push(otherLocations.locations[location]);
+    }
+
     return locations;
   }
 

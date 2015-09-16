@@ -135,15 +135,14 @@ bio.display = function() {
 		prependToPage(formattedRole, "#header");
 		prependToPage(formattedName, "#header");
 
+		displaySkills();
 		displayInternationalizeButton();
-
-		bio.displaySkills();
 	}
 };
 
 bio.display();
 
-bio.displaySkills = function() {
+function displaySkills() {
 	if(bio.skills.length > 0) {
 		appendToPage(HTMLskillsStart, "#header");
 
@@ -152,7 +151,7 @@ bio.displaySkills = function() {
 			appendToPage(formattedSkill, "#skills");
 		}
 	}
-};
+}
 
 function displayInternationalizeButton() {
 	appendToPage(internationalizeButton, "#main");

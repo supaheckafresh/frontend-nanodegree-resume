@@ -117,6 +117,29 @@ var projects = {
 	]
 };
 
+var volunteering = {
+	"activities" : [
+		{
+			"title" : "Three Rivers, CA Library - Children's Summer Reading Program",
+			"dates" : "July, 2013 & July, 2014",
+			"location" : "Three Rivers, CA",
+			"description" : "Both volunteering events took place during the Library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors. In 2014, I helped 25+ children build shoebox guitars and conducted them in a performance with their new instruments."
+		},
+		{
+			"title" : "The Midnight Mission - Meal Service & Food Bags",
+			"dates" : "December 25, 2010 through 2013",
+			"location" : "Los Angeles, CA",
+			"description" : "Served Christmas breakfast to homeless people & families. Prepared and distributed food bags."
+		},
+		{
+			"title" : "Habitat for Humanity - ReStore Booth",
+			"dates" : "September 21, 2013",
+			"location" : "Visalia, CA",
+			"description" : "Operated the ReStore booth at the 2013 Visalia Home Expo. Provided information to guests, gathered contact information from potential donors, distributed brochures, and showed off \"repurposed\" furniture, home accessories, and building materials."
+		}
+	]
+};
+
 var otherLocations = {
 	"locations" : [
 		"Oceanside, CA",

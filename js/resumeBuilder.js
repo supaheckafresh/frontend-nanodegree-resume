@@ -189,6 +189,12 @@ function displayContacts() {
 		formattedEmail +
 		formattedGithub +
 		formattedLocation, "#topContacts");
+
+	appendToPage(
+		formattedMobile +
+		formattedEmail +
+		formattedGithub +
+		formattedLocation, "#footerContacts");
 }
 
 function displaySkills() {

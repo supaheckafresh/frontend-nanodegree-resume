@@ -153,23 +153,24 @@ var otherLocations = {
 bio.display = function() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
 
-		if(bio.welcomeMsg.length > 0) {
-			var formattedWelcomeMsg =
-				HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-			prependToPage(formattedWelcomeMsg, "#header");
-		}
-
-		if(bio.bioPic.length > 0) {
-			var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-			prependToPage(formattedBioPic, "#header");
-		}
-
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		prependToPage(formattedRole, "#header");
 		prependToPage(formattedName, "#header");
 
 		displayContacts();
+
+		if(bio.welcomeMsg.length > 0) {
+			var formattedWelcomeMsg =
+				HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+			appendToPage(formattedWelcomeMsg, "#header");
+		}
+
+		if(bio.bioPic.length > 0) {
+			var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+			appendToPage(formattedBioPic, "#header");
+		}
+
 		displaySkills();
 		displayInternationalizeButton();
 	}

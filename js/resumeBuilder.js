@@ -62,7 +62,8 @@ var education = {
 		{
 			"name" : "California Institute of the Arts",
 			"location" : "Valencia, CA",
-			"degree" : ["BFA - Music Technology"],
+			"degree" : ["Bachelor of Fine Arts"],
+			"major" : ["Music Technology"],
 			"dates" : "September, 2003 - December, 2006",
 			"url" : "https://calarts.edu/"
 		}
@@ -150,6 +151,7 @@ var otherLocations = {
 	]
 };
 
+
 bio.display = function() {
 	if(bio.name.length > 0 && bio.role.length > 0) {
 
@@ -174,38 +176,40 @@ bio.display = function() {
 		displaySkills();
 		displayInternationalizeButton();
 	}
+
+	function displayContacts() {
+		if(!bio.contacts.isEmptyObject) {
+			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+			var formattedEmail = HTMLemail.replace(/%data%/g, bio.contacts.email);
+			var formattedGithub = HTMLgithub.replace(/%data%/g, bio.contacts.github);
+			var formattedLocation =
+				HTMLlocation.replace("%data%", bio.contacts.location);
+
+			appendToPage(
+				formattedMobile +
+				formattedEmail +
+				formattedGithub +
+				formattedLocation, "#topContacts", "#footerContacts");
+		}
+	}
+
+	function displaySkills() {
+		if(bio.skills.length > 0) {
+			appendToPage(HTMLskillsStart, "#header");
+
+			for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
+				var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
+				appendToPage(formattedSkill, "#skills");
+			}
+		}
+	}
+
+	function displayInternationalizeButton() {
+		appendToPage(internationalizeButton, "#main");
+	}
 };
 
 bio.display();
-
-function displayContacts() {
-	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	var formattedEmail = HTMLemail.replace(/%data%/g, bio.contacts.email);
-	var formattedGithub = HTMLgithub.replace(/%data%/g, bio.contacts.github);
-	var formattedLocation =
-		HTMLlocation.replace("%data%", bio.contacts.location);
-
-	appendToPage(
-		formattedMobile +
-		formattedEmail +
-		formattedGithub +
-		formattedLocation, "#topContacts", "#footerContacts");
-}
-
-function displaySkills() {
-	if(bio.skills.length > 0) {
-		appendToPage(HTMLskillsStart, "#header");
-
-		for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
-			var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
-			appendToPage(formattedSkill, "#skills");
-		}
-	}
-}
-
-function displayInternationalizeButton() {
-	appendToPage(internationalizeButton, "#main");
-}
 
 
 work.display = function() {
@@ -241,14 +245,16 @@ education.display = function() {
 		for(var schoolIndex in education.schools) {
 			var school = education.schools[schoolIndex];
 			var formattedName = HTMLschoolName.replace("%data%", school.name);
-			var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+			var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree[schoolIndex]);
+			var formattedMajor = HTMLschoolMajor.replace("%data%", school.major[schoolIndex]);
 			var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
 			var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
 
 			appendToPage(formattedName +
 				formattedDegree +
 				formattedLocation +
-				formattedDates, ".education-entry:last");
+				formattedDates +
+				formattedMajor, ".education-entry:last");
 		}
 	}
 
@@ -264,8 +270,8 @@ education.display = function() {
 
 			appendToPage(formattedTitle +
 				formattedSchool +
-				formattedURL +
-				formattedOnlineDates, ".online-education-entry:last");
+				formattedOnlineDates +
+				formattedURL, ".online-education-entry:last");
 		}
 	}
 };

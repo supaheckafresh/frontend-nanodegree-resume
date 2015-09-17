@@ -32,15 +32,15 @@ var HTMLprojectImage = '<img src="%data%">';
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolDates = '<div class="date-text">%data%</div><br/><br/>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br/>Major: %data%</em>';
 
 var HTMLonlineSchoolStart = '<div class="online-education-entry"></div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br/><a href="#">%data%</a>';
+var HTMLonlineDates = '<div class="date-text">%data%</div><br/><br/>';
+var HTMLonlineURL = '<a href="#">%data%</a>';
 
 var HTMLvolunteeringStart = '<div class="volunteering-entry"></div>';
 var HTMLvolunteeringTitle = '<a href="#">%data%</a>';

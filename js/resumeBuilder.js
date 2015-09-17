@@ -265,8 +265,8 @@ education.display = function() {
 
 			appendToPage(formattedTitle +
 				formattedSchool +
-				formattedOnlineDates +
-				formattedURL, ".online-education-entry:last");
+				formattedURL +
+				formattedOnlineDates, ".online-education-entry:last");
 		}
 	}
 };

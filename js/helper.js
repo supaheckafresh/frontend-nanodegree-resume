@@ -246,10 +246,12 @@ window.addEventListener('resize', function(e) {
 
 //Neil's additional helper functions:
 
-function appendToPage(content, htmlElement) {
-  $(htmlElement).append(content);
+function appendToPage(content, htmlElement1, htmlElement2) {
+  $(htmlElement1).append(content);
+  $(htmlElement2).append(content);
 }
 
-function prependToPage(content, htmlElement) {
-  $(htmlElement).prepend(content);
+function prependToPage(content, htmlElement1, htmlElement2) {
+  $(htmlElement1).prepend(content);
+  $(htmlElement2).prepend(content);
 }

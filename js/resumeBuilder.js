@@ -4,7 +4,7 @@ var bio = {
 	"welcomeMsg" : "Thanks for checking out my resume!",
 	"bioPic" : "http://lorempixel.com/150/150",
 	"contacts" : {
-		"mobile" : "(562)810-2501",
+		"mobile" : "(562) 810-2501",
 		"email" : "neilstrain@gmail.com",
 		"github" : "https://github.com/supaheckafresh",
 		"location" : "Exeter, CA"
@@ -89,31 +89,31 @@ var projects = {
 			"title" : "Composing and recording original music",
 			"dates" : "1997 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Playing guitar",
 			"dates" : "1991 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/nature/400/200"]
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/sports/400/200"]
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Painting and illustrating",
 			"dates" : "1983 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/abstract/400/200"]
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Cooking",
 			"dates" : "2001 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/people/400/200"]
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		}
 	]
 };
@@ -180,8 +180,8 @@ bio.display();
 
 function displayContacts() {
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	var formattedEmail = HTMLemail.replace(/%data%/g, bio.contacts.email);
+	var formattedGithub = HTMLgithub.replace(/%data%/g, bio.contacts.github);
 	var formattedLocation =
 		HTMLlocation.replace("%data%", bio.contacts.location);
 

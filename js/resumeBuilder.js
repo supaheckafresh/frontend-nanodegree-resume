@@ -38,7 +38,7 @@ var work = {
 			"title" : "Owner / Guitar Instructor",
 			"dates" : "August 2013 - Present",
 			"location" : "Exeter, CA",
-			"description" : "Private guitar lessons"
+			"description" : "Private guitar lessons. Host visting artist concerts and group workshops."
 		},
 		{
 			"employer" : "Digital Waybill",
@@ -122,9 +122,9 @@ var volunteering = {
 	"activities" : [
 		{
 			"title" : "Three Rivers, CA Library - Children's Summer Reading Program",
-			"dates" : "July, 2013 & July, 2014",
+			"dates" : "July, 2013 and July, 2014",
 			"location" : "Three Rivers, CA",
-			"description" : "Both volunteering events took place during the Library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors. In 2014, I helped 25+ children build shoebox guitars and conducted them in a performance with their new instruments."
+			"description" : "Both volunteering events took place during the Library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors, and afterwards I gave a free lesson for several kids (I let them play on a spare guitar). In 2014, I helped 25+ children build shoebox guitars and conducted them in a performance with their new instruments while their parents looked on."
 		},
 		{
 			"title" : "The Midnight Mission - Meal Service & Food Bags",
@@ -143,12 +143,10 @@ var volunteering = {
 
 var otherLocations = {
 	"locations" : [
-		"Oceanside, CA",
 		"Chicago, IL",
 		"Hammond, IN",
 		"San Mateo, CA",
 		"Redwood City, CA",
-		"Davis, CA"
 	]
 };
 
@@ -277,23 +275,23 @@ education.display();
 projects.display = function() {
 	if(projects.projects.length > 0) {
 		for(var projIndex in projects.projects) {
-			var eachProj = projects.projects[projIndex];
+			var project = projects.projects[projIndex];
 
 			appendToPage(HTMLprojectStart, "#projects");
 
-			var formattedTitle = HTMLprojectTitle.replace("%data%", eachProj.title);
+			var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
 			appendToPage(formattedTitle, ".project-entry:last");
 
-			var formattedDates = HTMLprojectDates.replace("%data%", eachProj.dates);
+			var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
 			appendToPage(formattedDates, ".project-entry:last");
 
 			var formattedDesc =
-				HTMLprojectDescription.replace("%data%", eachProj.description);
+				HTMLprojectDescription.replace("%data%", project.description);
 			appendToPage(formattedDesc, ".project-entry:last");
 
-			if(eachProj.images.length > 0) {
-				for(var imageIndex in eachProj.images) {
-					var image = eachProj.images[imageIndex];
+			if(project.images.length > 0) {
+				for(var imageIndex in project.images) {
+					var image = project.images[imageIndex];
 					var formattedImage = HTMLprojectImage.replace("%data%", image);
 					appendToPage(formattedImage, ".project-entry:last");
 				}
@@ -303,6 +301,31 @@ projects.display = function() {
 };
 
 projects.display();
+
+
+volunteering.display = function() {
+	if(volunteering.activities.length > 0) {
+		appendToPage(HTMLvolunteeringStart, "#volunteering");
+		for(var activityIndex in volunteering.activities) {
+			var activity = volunteering.activities[activityIndex];
+			var formattedTitle =
+				HTMLvolunteeringTitle.replace("%data%", activity.title);
+			var formattedDates =
+				HTMLvolunteeringDates.replace("%data%", activity.dates);
+			var formattedLocation =
+				HTMLvolunteeringLocation.replace("%data%", activity.location);
+			var formattedDescription =
+				HTMLvolunteeringDescription.replace("%data%", activity.description);
+
+			appendToPage(formattedTitle +
+				formattedDates +
+				formattedLocation +
+				formattedDescription, ".volunteering-entry:last");
+		}
+	}
+};
+
+volunteering.display();
 
 
 function displayMap() {

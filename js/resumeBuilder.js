@@ -177,8 +177,9 @@ bio.display = function() {
 		displayInternationalizeButton();
 	}
 
+
 	function displayContacts() {
-		if(!bio.contacts.isEmptyObject) {
+		if(!$.isEmptyObject(bio.contacts)) {
 			var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 			var formattedEmail = HTMLemail.replace(/%data%/g, bio.contacts.email);
 			var formattedGithub = HTMLgithub.replace(/%data%/g, bio.contacts.github);

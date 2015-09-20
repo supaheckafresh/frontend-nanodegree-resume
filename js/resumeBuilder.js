@@ -90,25 +90,38 @@ var projects = {
 			"title" : "Composing and recording original music",
 			"dates" : "1997 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+			"images" : ["images/music_max1.jpg", "images/music_max2.jpg", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Playing guitar",
 			"dates" : "1991 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+			"images" : [
+				"images/guitar_blue_finger.jpg",
+				"images/guitar_blue_hill.jpg",
+				"images/guitar_alligator_crawl.jpg",
+				"images/guitar_open_g.jpg"
+				]
 		},
 		{
-			"title" : "Cooking delicious meals for my wife and daughter.",
+			"title" : "Cooking delicious meals for my wife and daughter (and maybe a little bit for me...)",
 			"dates" : "2001 - Present",
-			"description" : "Pictured: recent dinner for baby Kiera -- Apple Juice Braised Beef with Wild Arugula and Cannellinis (left). ",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+			"description" : "Pictured from left: recent dinner for baby Kiera -- Apple Juice Braised Beef with Wild Arugula and Cannellinis. Kare-Kare. Hot Scratch Pizza! Fried Shrimp & Green Tomatoes with Homemade Dipping Sauce & Tomato Relish. Very (Very) Spicy Shrimp Curry. Chicken & Rice with Homemade Chili Sauces. Shrimp Sinigang.",
+			"images" : [
+				"images/baby_beef.jpg",
+				"images/kare_kare.jpg",
+				"images/hot_pizza.jpg",
+				"images/fried_shrimp_green_tomatoes.jpg",
+				"images/very_spicy_curry.jpg",
+				"images/chicken_rice_chili.jpg",
+				"images/shrimp_sinigang.jpg"
+				]
 		},
 		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+			"images" : ["images/furniture_cab1.jpg", "images/furniture_cab2.jpg", "http://lorempixel.com/400/200"]
 		},
 		{
 			"title" : "Painting and illustrating",

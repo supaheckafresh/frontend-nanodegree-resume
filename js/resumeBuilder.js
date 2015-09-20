@@ -38,21 +38,21 @@ var work = {
 			"title" : "Owner / Guitar Instructor",
 			"dates" : "August 2013 - Present",
 			"location" : "Exeter, CA",
-			"description" : "Private guitar lessons. Host visting artist concerts and group workshops."
+			"description" : "Private guitar lessons. Variety of styles taught include, but are not limited to specialty in fingerstyle, blues, country, jazz, and rock. Providing student access to intimate performances & workshops by world-class visiting artists hosted through Neil's Concert Series."
 		},
 		{
 			"employer" : "Digital Waybill",
-			"title" : "Operations Manager",
+			"title" : "Operations Manager / Software Sales Representative",
 			"dates" : "October, 2009 - May, 2013",
 			"location" : "Santa Monica, CA",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata."
+			"description" : "Enterprise software for the Logistics Industry. Operations Manager duties (promoted in Sept, 2011): Managed Customer service department. Maintained client relationships with over 400 courier, delivery, and logistics companies. Led marketing efforts. Sales duties (2009-2013): Generated qualified leads and called inbound leads for Digital Waybill worldwide in order to generate over $1.5 million in annualized revenue. Closed over 500 accounts. Maintained over 50% close-ratio on leads with a demo & 40% close-ratio on all qualified leads."
 		},
 		{
 			"employer" : "Morgan Stanley Smith Barney",
 			"title" : "Financial Advisor",
 			"dates" : "January, 2006 - September, 2009",
 			"location" : "Long Beach, CA",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata."
+			"description" : "Partnered with three senior advisors to seek out new clients. Increased revenue of the team's corporate retirement plans by more than 50% during tenure. Generated appointments with prospective clients with over $1mm in investable assets. Prepared written sales and account proposals, pitch books, and other presentation materials. Supervised client service staff and interns."
 		}
 	]
 };
@@ -99,6 +99,12 @@ var projects = {
 			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		},
 		{
+			"title" : "Cooking delicious meals for my wife and daughter.",
+			"dates" : "2001 - Present",
+			"description" : "Pictured: recent dinner for baby Kiera -- Apple Juice Braised Beef with Wild Arugula and Cannellinis (left). ",
+			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+		},
+		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
@@ -107,12 +113,6 @@ var projects = {
 		{
 			"title" : "Painting and illustrating",
 			"dates" : "1983 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
-		},
-		{
-			"title" : "Cooking",
-			"dates" : "2001 - Present",
 			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
 			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
 		}

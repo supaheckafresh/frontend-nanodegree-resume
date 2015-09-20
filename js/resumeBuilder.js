@@ -138,7 +138,7 @@ var volunteering = {
 			"title" : "Three Rivers, CA Library - Children's Summer Reading Program",
 			"dates" : "July, 2013 and July, 2014",
 			"location" : "Three Rivers, CA",
-			"description" : "Both volunteering events took place during the Library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors, and afterwards I gave a free lesson for several kids (I let them play on a spare guitar). In 2014, I helped 25+ children build shoebox guitars and conducted them in a performance with their new instruments while their parents looked on."
+			"description" : "Both volunteering events took place during the library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors, and afterwards I gave a free lesson for several kids (I let them play on a spare guitar). In 2014, I helped around 25 children build shoebox guitars, and then I conducted them in a performance with their new instruments while their parents looked on."
 		},
 		{
 			"title" : "The Midnight Mission - Meal Service & Food Bags",

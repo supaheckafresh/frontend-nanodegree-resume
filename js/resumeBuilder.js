@@ -67,8 +67,8 @@ work.display = function() {
 
             appendToPage(HTMLworkStart, "#workExperience");
 
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", eachJob.employer);
-            var formattedUrl = HTMLworkEmployer.replace("#", eachJob.url);
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", eachJob.employer)
+              .replace("#", eachJob.url);
             var formattedTitle = HTMLworkTitle.replace("%data%", eachJob.title);
             appendToPage(formattedEmployer + formattedTitle, ".work-entry:last");
 

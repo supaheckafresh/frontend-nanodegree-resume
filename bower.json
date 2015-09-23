@@ -1,0 +1,17 @@
+{
+  "name": "frontend-nanodegree-resume",
+  "version": "0.0.2",
+  "homepage": "https://github.com/supaheckafresh/frontend-nanodegree-resume",
+  "authors": [
+    "supaheckafresh <neilstrain@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -70,11 +70,20 @@ hr {
   border-style: dashed;
 }
 
+em {
+  color: #424242;
+}
+
+.role {
+  font-family: 'Karma', serif;
+  font-size: 36px;
+  color: #424242;
+}
 
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #616161;
   line-height: 16px;
   float: left;
 }
@@ -92,12 +101,13 @@ p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+  padding-bottom: 16px;
 }
 
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  padding: 5px 0 5px;
   display: block;
 }
 
@@ -147,6 +157,14 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+.flex-item {
+  .flex-box;
+  padding: 5px;
+  margin: 5px;
+  background-color: #311b92;
+  border-radius: 4px;
 }
 
 .center-content {

@@ -16,18 +16,25 @@ var bio = {
 		"jQuery",
 		"CSS",
 		"HTML5",
+		"Git/GitHub",
 		"Bootstrap",
 		"Object-Oriented Programming",
 		"Jinja2",
 		"SQLite",
-		"Git/GitHub",
+		"XML",
+		"Sublime Text",
+		"IntelliJ IDEA",
 		"Web Apps",
 		"Operations Management",
 		"Sales",
 		"Customer Service",
 		"Management",
 		"Strategy",
-		"Marketing"
+		"Marketing",
+		"Team Building",
+		"Attention to Detail",
+		"Problem Solving",
+		"Passion for Learning"
 	]
 };
 

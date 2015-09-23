@@ -1,14 +1,14 @@
 
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderRole = '<span class="role">&emsp;%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="purple-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="purple-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="purple-text">email</span><a href="mailto:%data%"><span class="white-text">%data%</span></a></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="purple-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="purple-text">github</span><a href="%data%" target="_blank"><span class="white-text">%data%</span></a></li>';
-var HTMLblog = '<li class="flex-item"><span class="purple-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="purple-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-box"><span class="purple-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-box"><span class="purple-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-box"><span class="purple-text">email</span><a href="mailto:%data%"><span class="white-text">%data%</span></a></li>';
+var HTMLtwitter = '<li class="flex-box"><span class="purple-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-box"><span class="purple-text">github</span><a href="%data%" target="_blank"><span class="white-text">%data%</span></a></li>';
+var HTMLblog = '<li class="flex-box"><span class="purple-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-box"><span class="purple-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';

@@ -93,7 +93,8 @@ education.display = function() {
         appendToPage(HTMLschoolStart, "#education");
         for (var schoolIndex in education.schools) {
             var school = education.schools[schoolIndex];
-            var formattedName = HTMLschoolName.replace("%data%", school.name);
+            var formattedName = HTMLschoolName.replace("%data%", school.name)
+              .replace("#", school.url);
             var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree[schoolIndex]);
             var formattedMajor = HTMLschoolMajor.replace("%data%", school.major[schoolIndex]);
             var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
@@ -112,10 +113,12 @@ education.display = function() {
         for (var courseIndex in education.onlineCourses) {
             var course = education.onlineCourses[courseIndex];
             var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
-            var formattedTitle = HTMLonlineTitle.replace("%data%", course.title);
+            var formattedTitle = HTMLonlineTitle.replace("%data%", course.title)
+              .replace("#", course.url);
             var formattedOnlineDates =
                 HTMLonlineDates.replace("%data%", course.dates);
-            var formattedURL = HTMLonlineURL.replace("%data%", course.url);
+            var formattedURL = HTMLonlineURL.replace("%data%", course.url)
+              .replace("#", course.url);
 
             appendToPage(formattedTitle +
                 formattedSchool +

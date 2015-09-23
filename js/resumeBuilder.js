@@ -7,7 +7,7 @@ var bio = {
 		"mobile" : "(562) 810-2501",
 		"email" : "neilstrain@gmail.com",
 		"github" : "https://github.com/supaheckafresh",
-		"location" : "Exeter, CA"
+		"location" : "San Joaquin Valley, CA"
 	},
 	"skills" : [
 		"JavaScript",
@@ -42,6 +42,7 @@ var work = {
 	"jobs" : [
 		{
 			"employer" : "Neil's Guitar Pickin' Studio (self-employed)",
+			"link" : "http://neilsguitarstudio.com",
 			"title" : "Owner / Guitar Instructor",
 			"dates" : "August 2013 - Present",
 			"location" : "Exeter, CA",
@@ -49,6 +50,7 @@ var work = {
 		},
 		{
 			"employer" : "Digital Waybill",
+			"link" : "http://digitalwaybill.com",
 			"title" : "Operations Manager / Software Sales Representative",
 			"dates" : "October, 2009 - May, 2013",
 			"location" : "Santa Monica, CA",
@@ -56,6 +58,7 @@ var work = {
 		},
 		{
 			"employer" : "Morgan Stanley Smith Barney",
+			"link" : "http://morganstanley.com",
 			"title" : "Financial Advisor",
 			"dates" : "January, 2006 - September, 2009",
 			"location" : "Long Beach, CA",

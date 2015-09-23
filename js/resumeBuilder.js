@@ -2,7 +2,7 @@ var bio = {
 	"name" : "Neil Strain",
 	"role" : "Web Developer",
 	"welcomeMsg" : "Thanks for checking out my resume!",
-	"bioPic" : "http://lorempixel.com/150/150",
+	"bioPic" : "images/neil.jpg",
 	"contacts" : {
 		"mobile" : "(562) 810-2501",
 		"email" : "neilstrain@gmail.com",
@@ -96,19 +96,26 @@ var projects = {
 		{
 			"title" : "Composing and recording original music",
 			"dates" : "1997 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["images/music_max1.jpg", "images/music_max2.jpg", "http://lorempixel.com/400/200"]
+			"description" : "I started creating original compositions, consisting of both acoustic and electronic sounds, in middle school, on a 4-track tape recorder. Since then I've advanced to generating my own sounds in Max/MSP (and a variety of other audio synthesis environments), and aranging compositions several professional audio workstations including Digital Performer, Abelton Live, and FL Studio.",
+			"images" : [
+				"<iframe width=\"200\" height=\"200\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225159470&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>",
+				"<iframe width=\"200\" height=\"200\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225167132&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>",
+				"<iframe width=\"200\" height=\"200\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225160054&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>",
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/KyPsyd-_R3M\" frameborder=\"0\" allowfullscreen></iframe>",
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/XJikq067GHw\" frameborder=\"0\" allowfullscreen></iframe>"
+			]
 		},
 		{
 			"title" : "Playing guitar",
 			"dates" : "1991 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
+			"description" : "I have been picking around on the guitar since I was 9. I've picked up a variety of styles, but over the past few years I've developed a passion for fingerstyle and blues.",
 			"images" : [
-				"images/guitar_blue_finger.jpg",
-				"images/guitar_blue_hill.jpg",
-				"images/guitar_alligator_crawl.jpg",
-				"images/guitar_open_g.jpg"
-				]
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/OEoeNYbd9tA\" frameborder=\"0\" allowfullscreen></iframe>",
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/V8fW3DcZGq4\" frameborder=\"0\" allowfullscreen></iframe>",
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/xXW43y0qowY\" frameborder=\"0\" allowfullscreen></iframe>",
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/xmPwIxpV_vU\" frameborder=\"0\" allowfullscreen></iframe>",
+				"<iframe width=\"200\" height=\"200\" src=\"https://www.youtube.com/embed/ke3teLb7BdQ\" frameborder=\"0\" allowfullscreen></iframe>"
+			]
 		},
 		{
 			"title" : "Cooking delicious meals for my wife and daughter (and maybe a little bit for me...)",
@@ -122,19 +129,18 @@ var projects = {
 				"images/very_spicy_curry.jpg",
 				"images/chicken_rice_chili.jpg",
 				"images/shrimp_sinigang.jpg"
-				]
+			]
 		},
 		{
 			"title" : "Refurbishing old furniture",
 			"dates" : "2011 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["images/furniture_cab1.jpg", "images/furniture_cab2.jpg", "http://lorempixel.com/400/200"]
-		},
-		{
-			"title" : "Painting and illustrating",
-			"dates" : "1983 - Present",
-			"description" : "Vis sensibus forensibus moderatius cu. Eu modo malis aeterno cum, cu sit offendit interpretaris. Dicant animal verterem eum an, mei in consulatu dignissim, id vim summo saperet delicata.",
-			"images" : ["http://lorempixel.com/400/200", "http://lorempixel.com/400/200", "http://lorempixel.com/400/200"]
+			"description" : "Pictured from left: small chest of drawers (before and after) for my daughter's bedroom. Buffet for our dining area.",
+			"images" : [
+				"images/furniture_cab1.jpg",
+				"images/furniture_cab2.jpg",
+				"images/buffet1.jpg",
+				"images/buffet2.jpg"
+			]
 		}
 	]
 };
@@ -146,6 +152,12 @@ var volunteering = {
 			"dates" : "July, 2013 and July, 2014",
 			"location" : "Three Rivers, CA",
 			"description" : "Both volunteering events took place during the library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors, and afterwards I gave a free lesson for several kids (I let them play on a spare guitar). In 2014, I helped around 25 children build shoebox guitars, and then I conducted them in a performance with their new instruments while their parents looked on."
+		},
+		{
+			"title" : "Casa Grande Senior Care Homes & Assisted Living",
+			"dates" : "October through December, 2013 - Saturday mornings",
+			"location" : "Visalia, CA",
+			"description" : "Performed free guitar concerts for residents."
 		},
 		{
 			"title" : "The Midnight Mission - Meal Service & Food Bags",
@@ -319,9 +331,14 @@ projects.display = function() {
 
 			if(project.images.length > 0) {
 				for(var imageIndex in project.images) {
-					var image = project.images[imageIndex];
-					var formattedImage = HTMLprojectImage.replace("%data%", image);
-					appendToPage(formattedImage, ".project-entry:last");
+						var image = project.images[imageIndex];
+						if(image.indexOf("images/") != -1) {
+							var formattedImage = HTMLprojectImage.replace("%data%", image);
+							appendToPage(formattedImage, ".project-entry:last");
+					} else {
+							var iFrame = image;
+							appendToPage(iFrame, ".project-entry:last");
+					}
 				}
 			}
 		}

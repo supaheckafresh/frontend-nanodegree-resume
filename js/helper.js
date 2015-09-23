@@ -244,7 +244,7 @@ window.addEventListener('resize', function(e) {
 });
 
 
-//Neil's additional functions:
+// Neil's additional functions:
 
 function appendToPage(content, htmlElement1, htmlElement2) {
   $(htmlElement1).append(content);
@@ -256,12 +256,13 @@ function prependToPage(content, htmlElement1, htmlElement2) {
   $(htmlElement2).prepend(content);
 }
 
+// Animate skills
 $(document).ready(function () {
     $("*#skill", this).hover(function () {
         $(this).animate({
-          borderWidth: "+=5px", fontSize: "+=3px", margin: "-=5px"}, "slow");
+          borderWidth: "+=2px", fontSize: "+=3px", margin: "-=9px"}, "slow");
     }, function () {
         $(this).animate({
-          borderWidth: "-=5px", fontSize: "-=3px", margin: "+=5px"}, "slow");
+          borderWidth: "-=2px", fontSize: "-=3px", margin: "+=9px"}, "slow");
     });
 });

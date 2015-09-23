@@ -42,7 +42,7 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br/><a href="#" target="_blank">%data%</a><br/><br/>';
 
 var HTMLvolunteeringStart = '<div class="volunteering-entry"></div>';
-var HTMLvolunteeringTitle = '<a href="#">%data%</a>';
+var HTMLvolunteeringTitle = '<a href="#" target="_blank">%data%</a>';
 var HTMLvolunteeringDates = '<div class="date-text">%data%</div>';
 var HTMLvolunteeringLocation = '<div class="location-text">%data%</div>';
 var HTMLvolunteeringDescription = '<p><br/>%data%</p>';

@@ -173,7 +173,8 @@ volunteering.display = function() {
         for (var activityIndex in volunteering.activities) {
             var activity = volunteering.activities[activityIndex];
             var formattedTitle =
-                HTMLvolunteeringTitle.replace("%data%", activity.title);
+                HTMLvolunteeringTitle.replace("%data%", activity.title)
+                .replace("#", activity.url);
             var formattedDates =
                 HTMLvolunteeringDates.replace("%data%", activity.dates);
             var formattedLocation =

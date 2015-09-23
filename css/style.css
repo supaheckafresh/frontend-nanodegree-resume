@@ -82,17 +82,14 @@ em {
   color: #424242;
 }
 
-.top-right,
-.dropdown-menu.dropdown-menu-right {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
 .role {
   font-family: "Karma", serif;
   font-size: 36px;
   color: #424242;
+}
+
+.float-right {
+  float: right;
 }
 
 .date-text {
@@ -108,10 +105,6 @@ em {
   font-size: 14px;
   color: #999;
   line-height: 16px;
-  float: right;
-}
-
-.button-right {
   float: right;
 }
 

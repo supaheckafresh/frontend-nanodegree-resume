@@ -4,6 +4,7 @@ bio.display = function() {
 
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
+        prependToPage(HTMLdropdown, "#header");
         prependToPage(formattedRole, "#header");
         prependToPage(formattedName, "#header");
 

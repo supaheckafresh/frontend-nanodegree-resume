@@ -1,5 +1,7 @@
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="role">&emsp;%data%</span><hr/>';
+var HTMLheaderRole = '<span class="role">&emsp;%data%</span>';
+
+var HTMLdropdown = '<div class="dropdown float-right"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resume Sections<span class="caret"></span></button><ul class="dropdown-menu dropdown-menu-right"><li><a href="#work_experience">Work Experience</a></li><li><a href="#education">Education</a></li><li><a href="#online_classes">Online Classes</a></li><li><a href="#projects">Projects</a></li><li><a href="#volunteering">Volunteering</a></li><li role="separator" class="divider"></li><li><a href="mailto:neilstrain@gmail.com">Let\'s Connect</a></li></ul></div><div><hr/></div>';
 
 var HTMLcontactGeneric = '<li class="flex-box"><span class="purple-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-box"><span class="purple-text">mobile</span><span class="white-text">%data%</span></li>';

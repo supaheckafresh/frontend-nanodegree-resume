@@ -104,6 +104,10 @@ em {
   float: right;
 }
 
+.button-right {
+  float: right;
+}
+
 p {
   font-size: 16px;
   color: #333;

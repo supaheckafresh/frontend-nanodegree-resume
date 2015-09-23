@@ -47,7 +47,7 @@ var HTMLvolunteeringDates = '<div class="date-text">%data%</div>';
 var HTMLvolunteeringLocation = '<div class="location-text">%data%</div>';
 var HTMLvolunteeringDescription = '<p><br/>%data%</p>';
 
-var internationalizeButton = '<button>Internationalize</button>';
+var internationalizeButton = '<button class="button-right">Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 

@@ -53,7 +53,7 @@ bio.display = function() {
     }
 
     function displayInternationalizeButton() {
-        appendToPage(internationalizeButton, "#main");
+        appendToPage(internationalizeButton, "#header");
     }
 };
 

@@ -89,7 +89,7 @@ var projects = {
     "projects": [{
         "title": "Composing and recording original music",
         "dates": "1997 - Present",
-        "description": "I started creating original compositions, consisting of both acoustic and electronic sounds, in middle school, on a 4-track tape recorder. Since then I've advanced to generating my own sounds in Max/MSP (and a variety of other audio synthesis environments), and aranging compositions several professional audio workstations including Digital Performer, Abelton Live, and FL Studio.",
+        "description": "I started creating original compositions, consisting of both acoustic and electronic sounds, in middle school, on a 4-track tape recorder. Since then I've advanced to generating my own sounds in Max/MSP (and a variety of other audio synthesis environments), and arranging compositions with several professional audio workstations including Digital Performer, Abelton Live, and FL Studio.",
         "images": [
             "<iframe class=\"proj-pic\" width=\"200\" height=\"200\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225159470&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>",
             "<iframe class=\"proj-pic\" width=\"200\" height=\"200\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/225167132&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;visual=true\"></iframe>",

@@ -82,6 +82,13 @@ em {
   color: #424242;
 }
 
+.top-right,
+.dropdown-menu.dropdown-menu-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .role {
   font-family: "Karma", serif;
   font-size: 36px;

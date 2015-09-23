@@ -1,3 +1,4 @@
+
 body,
 div,
 ul,
@@ -12,7 +13,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Metrophobic', sans-serif;
 }
 
 .clear-fix {
@@ -28,8 +29,8 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
+  font-size: 60px;
+  color: #304FFE;
   line-height: 48px;
   display: inline;
 }
@@ -37,7 +38,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #304ffe;
   line-height: 29px;
   padding: 10px;
 }
@@ -62,6 +63,11 @@ h4,
 h5 {
   padding:10px 5%;
 
+}
+
+hr {
+  border-color: #ffee58;
+  border-style: dashed;
 }
 
 
@@ -103,16 +109,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #304ffe;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.yellow {
+  background-color: #ffee58;
 }
 
-.orange-text {
-  color: #f5ae23;
+.purple-text {
+  color: #4a148c;
 }
 
 .white-text {
@@ -121,18 +127,17 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-image: url("../images/concrete_seamless/concrete_seamless.png");
   padding-bottom: 10px;
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.blue {
+  background-color: #00b8d4;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #00b8d4;
 }
 
 .flex-box {

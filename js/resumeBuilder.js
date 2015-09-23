@@ -41,25 +41,25 @@ var bio = {
 var work = {
     "jobs": [{
         "employer": "Neil's Guitar Pickin' Studio (self-employed)",
-        "link": "http://neilsguitarstudio.com",
         "title": "Owner / Guitar Instructor",
         "dates": "August 2013 - Present",
         "location": "Exeter, CA",
-        "description": "Private guitar lessons. Variety of styles taught include, but are not limited to specialty in fingerstyle, blues, country, jazz, and rock. Providing student access to intimate performances & workshops by world-class visiting artists hosted through Neil's Concert Series."
+        "description": "Private guitar lessons. Variety of styles taught include, but are not limited to specialty in fingerstyle, blues, country, jazz, and rock. Providing student access to intimate performances & workshops by world-class visiting artists hosted through Neil's Concert Series.",
+        "url": "http://neilsguitarstudio.com"
     }, {
         "employer": "Digital Waybill",
-        "link": "http://digitalwaybill.com",
         "title": "Operations Manager / Software Sales Representative",
         "dates": "October, 2009 - May, 2013",
         "location": "Santa Monica, CA",
-        "description": "Enterprise software for the Logistics Industry. Operations Manager duties (promoted in Sept, 2011): Managed Customer service department. Maintained client relationships with over 400 courier, delivery, and logistics companies. Led marketing efforts. Sales duties (2009-2013): Generated qualified leads and called inbound leads for Digital Waybill worldwide in order to generate over $1.5 million in annualized revenue. Closed over 500 accounts. Maintained over 50% close-ratio on leads with a demo & 40% close-ratio on all qualified leads."
+        "description": "Enterprise software for the Logistics Industry. Operations Manager duties (promoted in Sept, 2011): Managed Customer service department. Maintained client relationships with over 400 courier, delivery, and logistics companies. Led marketing efforts. Sales duties (2009-2013): Generated qualified leads and called inbound leads for Digital Waybill worldwide in order to generate over $1.5 million in annualized revenue. Closed over 500 accounts. Maintained over 50% close-ratio on leads with a demo & 40% close-ratio on all qualified leads.",
+        "url": "http://digitalwaybill.com"
     }, {
         "employer": "Morgan Stanley Smith Barney",
-        "link": "http://morganstanley.com",
         "title": "Financial Advisor",
         "dates": "January, 2006 - September, 2009",
         "location": "Long Beach, CA",
-        "description": "Partnered with three senior advisors to seek out new clients. Increased revenue of the team's corporate retirement plans by more than 50% during tenure. Generated appointments with prospective clients with over $1mm in investable assets. Prepared written sales and account proposals, pitch books, and other presentation materials. Supervised client service staff and interns."
+        "description": "Partnered with three senior advisors to seek out new clients. Increased revenue of the team's corporate retirement plans by more than 50% during tenure. Generated appointments with prospective clients with over $1mm in investable assets. Prepared written sales and account proposals, pitch books, and other presentation materials. Supervised client service staff and interns.",
+        "url": "http://morganstanley.com",
     }]
 };
 
@@ -139,22 +139,26 @@ var volunteering = {
         "title": "Three Rivers, CA Library - Children's Summer Reading Program",
         "dates": "July, 2013 and July, 2014",
         "location": "Three Rivers, CA",
-        "description": "Both volunteering events took place during the library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors, and afterwards I gave a free lesson for several kids (I let them play on a spare guitar). In 2014, I helped around 25 children build shoebox guitars, and then I conducted them in a performance with their new instruments while their parents looked on."
+        "description": "Both volunteering events took place during the library's annual summer booksale fundraiser. In 2013, I performed a free guitar concert for visitors, and afterwards I gave a free lesson for several kids (I let them play on a spare guitar). In 2014, I helped around 25 children build shoebox guitars, and then I conducted them in a performance with their new instruments while their parents looked on.",
+        "url" : "http://tularecountylibrary.org/threeriversbranch.html"
     }, {
         "title": "Casa Grande Senior Care Homes & Assisted Living",
         "dates": "October through December, 2013 - Saturday mornings",
         "location": "Visalia, CA",
-        "description": "Performed free guitar concerts for residents."
+        "description": "Performed free guitar concerts for residents.",
+        "url" : "http://casagrandeseniorcarehomes.com"
     }, {
         "title": "The Midnight Mission - Meal Service & Food Bags",
         "dates": "December 25, 2010 through 2013",
         "location": "Los Angeles, CA",
-        "description": "Served Christmas breakfast to homeless people & families. Prepared and distributed food bags."
+        "description": "Served Christmas breakfast to homeless people & families. Prepared and distributed food bags.",
+        "url" : "http://midnightmission.org/"
     }, {
         "title": "Habitat for Humanity - ReStore Booth",
         "dates": "September 21, 2013",
         "location": "Visalia, CA",
-        "description": "Operated the ReStore booth at the 2013 Visalia Home Expo. Provided information to guests, gathered contact information from potential donors, distributed brochures, and showed off \"repurposed\" furniture, home accessories, and building materials."
+        "description": "Operated the ReStore booth at the 2013 Visalia Home Expo. Provided information to guests, gathered contact information from potential donors, distributed brochures, and showed off \"repurposed\" furniture, home accessories, and building materials.",
+        "url" : "http://hfhtc.org/"
     }]
 };
 

@@ -14,7 +14,7 @@ var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li id="skill" class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -244,7 +244,7 @@ window.addEventListener('resize', function(e) {
 });
 
 
-//Neil's additional helper functions:
+//Neil's additional functions:
 
 function appendToPage(content, htmlElement1, htmlElement2) {
   $(htmlElement1).append(content);
@@ -255,3 +255,13 @@ function prependToPage(content, htmlElement1, htmlElement2) {
   $(htmlElement1).prepend(content);
   $(htmlElement2).prepend(content);
 }
+
+$(document).ready(function () {
+    $("*#skill", this).hover(function () {
+        $(this).animate({
+          borderWidth: "+=5px", fontSize: "+=3px", margin: "-=5px"}, "slow");
+    }, function () {
+        $(this).animate({
+          borderWidth: "-=5px", fontSize: "-=3px", margin: "+=5px"}, "slow");
+    });
+});

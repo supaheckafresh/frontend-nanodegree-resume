@@ -167,6 +167,18 @@ a {
   border-radius: 4px;
 }
 
+#skills {
+  justify-content: start;
+}
+
+#skill {
+  white-space: nowrap;
+  overflow: hidden;
+  height: 24px;
+  text-align: center;
+  margin-left: 10px;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }

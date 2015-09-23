@@ -88,8 +88,11 @@ em {
   color: #424242;
 }
 
-.float-right {
-  float: right;
+.fixed-right {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  opacity: 0.8;
 }
 
 .date-text {

@@ -129,8 +129,8 @@ var projects = {
         "images": [
             "images/furniture_cab1.JPG",
             "images/furniture_cab2.JPG",
-            "images/buffet1.jpg",
-            "images/buffet2.jpg"
+            "images/buffet1.JPG",
+            "images/buffet2.JPG"
         ]
     }]
 };

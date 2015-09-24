@@ -193,6 +193,7 @@ a {
 }
 
 .flex-item {
+  display: block;
   padding: 5px;
   margin: 5px;
   background-color: #311b92;
@@ -204,7 +205,7 @@ a {
   justify-content: start;
 }
 
-/*#skill {
+#skill {
   white-space: nowrap;
   overflow: hidden;
   height: 24px;
@@ -212,7 +213,7 @@ a {
   text-align: center;
   margin-left: 10px;
   padding-bottom: 30px;
-}*/
+}
 
 .internationalize {
   float: right;

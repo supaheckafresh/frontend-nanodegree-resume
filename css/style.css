@@ -182,6 +182,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
+  justify-content: space-around;
 }
 
 .flex-item {
@@ -198,8 +199,9 @@ a {
 
 #skill {
   white-space: nowrap;
-  overflow: hidden;
+/*  overflow: hidden;*/
   height: 24px;
+  width: auto;
   text-align: center;
   margin-left: 10px;
   padding-bottom: 30px;

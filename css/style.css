@@ -76,10 +76,15 @@ h5 {
 hr {
   border-color: #ffee58;
   border-style: dashed;
+  margin-top: 0;
 }
 
 em {
   color: #424242;
+}
+
+#name {
+  margin-top: 36px;
 }
 
 .role {
@@ -267,6 +272,12 @@ span {
   width: 100%;
   padding-bottom: 5%;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  #name {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 750px) {

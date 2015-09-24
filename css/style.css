@@ -198,6 +198,10 @@ a {
   padding-bottom: 30px;
 }
 
+.internationalize {
+  float: right;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }

@@ -185,11 +185,11 @@ a {
 
 .flex-box {
   display: -webkit-flex;
+  -webkit-justify-content: space-around;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
   justify-content: space-around;
+  flex-flow: row wrap;
+  padding: 10px;
 }
 
 .flex-item {
@@ -206,7 +206,7 @@ a {
 
 #skill {
   white-space: nowrap;
-/*  overflow: hidden;*/
+  overflow: hidden;
   height: 24px;
   width: auto;
   text-align: center;

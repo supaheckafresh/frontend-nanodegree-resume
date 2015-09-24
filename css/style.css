@@ -181,12 +181,10 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*justify-content: space-around;*/
   padding: 10px;
 }
 
 .flex-item {
-  .flex-box;
   padding: 5px;
   margin: 5px;
   background-color: #311b92;

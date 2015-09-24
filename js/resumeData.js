@@ -114,23 +114,23 @@ var projects = {
         "dates": "2001 - Present",
         "description": "Pictured from left: recent dinner for baby Kiera -- Apple Juice Braised Beef with Wild Arugula and Cannellinis. Kare-Kare. Hot Scratch Pizza! Fried Shrimp & Green Tomatoes with Homemade Dipping Sauce & Tomato Relish. Very (Very) Spicy Shrimp Curry. Chicken & Rice with Homemade Chili Sauces. Shrimp Sinigang.",
         "images": [
-            "images/baby_beef.jpg",
-            "images/kare_kare.jpg",
-            "images/hot_pizza.jpg",
-            "images/fried_shrimp_green_tomatoes.jpg",
-            "images/very_spicy_curry.jpg",
-            "images/chicken_rice_chili.jpg",
-            "images/shrimp_sinigang.jpg"
+            "images/baby_beef.JPG",
+            "images/kare_kare.JPG",
+            "images/hot_pizza.JPG",
+            "images/fried_shrimp_green_tomatoes.JPG",
+            "images/very_spicy_curry.JPG",
+            "images/chicken_rice_chili.JPG",
+            "images/shrimp_sinigang.JPG"
         ]
     }, {
         "title": "Refurbishing old furniture",
         "dates": "2011 - Present",
         "description": "Pictured from left: small chest of drawers (before and after) for my daughter's bedroom. Buffet for our dining area.",
         "images": [
-            "images/furniture_cab1.jpg",
-            "images/furniture_cab2.jpg",
-            "images/buffet1.jpg",
-            "images/buffet2.jpg"
+            "images/furniture_cab1.JPG",
+            "images/furniture_cab2.JPG",
+            "images/buffet1.JPG",
+            "images/buffet2.JPG"
         ]
     }]
 };

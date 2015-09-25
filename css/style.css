@@ -209,7 +209,7 @@ a {
   justify-content: start;
 }
 
-#skill {
+/*#skill {
   white-space: nowrap;
   overflow: hidden;
   height: 24px;
@@ -217,7 +217,7 @@ a {
   text-align: center;
   margin-left: 10px;
   padding-bottom: 30px;
-}
+}*/
 
 .internationalize {
   float: right;

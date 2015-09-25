@@ -138,6 +138,10 @@ a {
   display: block;
 }
 
+.span {
+  display: inline;
+}
+
 .anchor {
   padding: 0;
 }
@@ -192,14 +196,14 @@ a {
   padding: 10px;
 }
 
-.flex-item {
+/*.flex-item {
   display: block;
   padding: 5px;
   margin: 5px;
   background-color: #311b92;
   border-radius: 4px;
   box-shadow: 2px 2px 5px #ffee58;
-}
+}*/
 
 #skills {
   justify-content: start;

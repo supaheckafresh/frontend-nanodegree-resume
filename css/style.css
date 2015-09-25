@@ -22,6 +22,10 @@ h6 {
   font-family: "Metrophobic", sans-serif;
 }
 
+span {
+  padding: 5px;
+}
+
 .biopic,
 .proj-pic,
 object,
@@ -30,18 +34,6 @@ video {
   max-height: 100%;
   box-shadow: 2px 2px 5px #888;
   margin: 4px 10px 16px;
-}
-
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.online-education-entry,
-.work-entry,
-.volunteering-entry,
-.project-entry {
-  padding: 0 5%;
 }
 
 h1 {
@@ -80,6 +72,21 @@ h5 {
   padding: 10px 5%;
 }
 
+p {
+  font-size: 16px;
+  color: #333;
+  line-height: 21px;
+  padding: 4px 0 8px;
+}
+
+a {
+  font-size: 18px;
+  color: #ff5722;
+  text-decoration: none;
+  padding: 5px 0 5px;
+  display: block;
+}
+
 hr {
   border-color: #ffee58;
   border-style: dashed;
@@ -88,6 +95,30 @@ hr {
 
 em {
   color: #424242;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+.education-entry,
+.online-education-entry,
+.work-entry,
+.volunteering-entry,
+.project-entry {
+  padding: 0 5%;
+}
+
+.blue {
+  background-color: #00b8d4;
+}
+
+.center-content {
+  padding: 2.5% 5%;
 }
 
 #name {
@@ -100,11 +131,24 @@ em {
   color: #424242;
 }
 
+.biopic {
+  float: left;
+  width: 200px;
+  display: none;
+}
+
 .fixed-right {
   position: fixed;
   top: 10px;
   right: 20px;
   opacity: 0.8;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
 }
 
 .date-text {
@@ -123,21 +167,6 @@ em {
   float: right;
 }
 
-p {
-  font-size: 16px;
-  color: #333;
-  line-height: 21px;
-  padding: 4px 0 8px;
-}
-
-a {
-  font-size: 18px;
-  color: #ff5722;
-  text-decoration: none;
-  padding: 5px 0 5px;
-  display: block;
-}
-
 .span {
   display: inline;
 }
@@ -146,20 +175,17 @@ a {
   padding: 0;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
-  color: #304ffe;
-  display: none;
-}
-
 .yellow {
   background-color: #ffee58;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  padding: 10px;
 }
 
 .purple-text {
@@ -173,89 +199,63 @@ a {
   color: #fff;
 }
 
+#skills-h3 {
+  color: #304ffe;
+  display: none;
+}
+
+#skills {
+  justify-content: start;
+}
+
+#skill {
+  white-space: nowrap;
+  height: 24px;
+  text-align: center;
+  margin: 5px 5px 10px;
+  padding-bottom: 24px;
+  background-color: #311b92;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px #ffee58;
+}
+
+.internationalize {
+  float: right;
+}
+
 .gray {
   background-image: url("../images/concrete_seamless/concrete_seamless.png");
   padding-bottom: 10px;
   clear: both;
 }
 
-.blue {
-  background-color: #00b8d4;
-}
-
-#header {
-  background-color: #00b8d4;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  -webkit-justify-content: space-around;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  padding: 10px;
-}
-
-/*.flex-item {
+#map {
   display: block;
-  padding: 5px;
-  margin: 5px;
-  background-color: #311b92;
-  border-radius: 4px;
-  box-shadow: 2px 2px 5px #ffee58;
-}*/
-
-#skills {
-  justify-content: start;
+  height: 100%;
+  margin: 0 5%;
 }
 
-/*#skill {
-  white-space: nowrap;
-  overflow: hidden;
-  height: 24px;
-  width: auto;
-  text-align: center;
-  margin-left: 10px;
-  padding-bottom: 30px;
-}*/
-
-.internationalize {
-  float: right;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  width: 200px;
-  display: none;
-}
-
-span {
-  padding: 5px;
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
 }
 
 #lets-connect {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  };
+@media only screen and (max-width: 700px) {
+  #name {
+    display: block;
+  }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (min-width: 750px) {
+  #skills-h3,
   .biopic {
-    width: 175px;
+    display: block;
   };
 }
 
@@ -273,28 +273,14 @@ span {
   };
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-  margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 700px) {
-  #name {
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
+@media only screen and (max-width:900px) {
   .biopic {
-    display: block;
+    width: 175px;
+  };
+}
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
   };
 }

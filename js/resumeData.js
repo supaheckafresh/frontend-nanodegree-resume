@@ -129,6 +129,7 @@ var projects = {
         "images": [
             "images/furniture_cab1.JPG",
             "images/furniture_cab2.JPG",
+            "images/furniture_cab3.JPG",
             "images/buffet1.JPG",
             "images/buffet2.JPG"
         ]

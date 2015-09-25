@@ -1,4 +1,3 @@
-
 bio.display = function() {
     if (bio.name.length > 0 && bio.role.length > 0) {
 
@@ -69,7 +68,7 @@ work.display = function() {
             appendToPage(HTMLworkStart, "#workExperience");
 
             var formattedEmployer = HTMLworkEmployer.replace("%data%", eachJob.employer)
-              .replace("#", eachJob.url);
+                .replace("#", eachJob.url);
             var formattedTitle = HTMLworkTitle.replace("%data%", eachJob.title);
             appendToPage(formattedEmployer + formattedTitle, ".work-entry:last");
 
@@ -95,7 +94,7 @@ education.display = function() {
         for (var schoolIndex in education.schools) {
             var school = education.schools[schoolIndex];
             var formattedName = HTMLschoolName.replace("%data%", school.name)
-              .replace("#", school.url);
+                .replace("#", school.url);
             var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree[schoolIndex]);
             var formattedMajor = HTMLschoolMajor.replace("%data%", school.major[schoolIndex]);
             var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
@@ -115,11 +114,11 @@ education.display = function() {
             var course = education.onlineCourses[courseIndex];
             var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
             var formattedTitle = HTMLonlineTitle.replace("%data%", course.title)
-              .replace("#", course.url);
+                .replace("#", course.url);
             var formattedOnlineDates =
                 HTMLonlineDates.replace("%data%", course.dates);
             var formattedURL = HTMLonlineURL.replace("%data%", course.url)
-              .replace("#", course.url);
+                .replace("#", course.url);
 
             appendToPage(formattedTitle +
                 formattedSchool +
@@ -193,7 +192,7 @@ volunteering.display = function() {
 
 volunteering.display();
 
-
+//not encapsulating because there is no map JSON object.
 function displayMap() {
     appendToPage(googleMap, "#mapDiv");
 }

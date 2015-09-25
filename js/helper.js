@@ -1,6 +1,7 @@
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="role">&emsp;%data%</span>';
 
+//TODO: put nav resources in JSON and build dynamically.
 var HTMLdropdown = '<div class="dropdown fixed-right"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resume Sections<span class="caret"></span></button><ul class="dropdown-menu dropdown-menu-right"><li><a href="#bioNav">Bio</a></li><li><a href="#workExperienceNav">Work Experience</a></li><li><a href="#educationNav">Education</a></li><li><a href="#onlineCoursesNav">Online Classes</a></li><li><a href="#projectsNav">Projects</a></li><li><a href="#volunteeringNav">Volunteering</a></li><li><a href="#mapNav">Map</a></li><li role="separator" class="divider"></li><li><a href="mailto:neilstrain@gmail.com">Let\'s Connect</a></li></ul></div><div><hr/></div>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="purple-text">%contact%</span><span class="white-text">%data%</span></li>';

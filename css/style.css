@@ -180,6 +180,11 @@ ul {
 }
 
 .flex-box {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-flex;
   -webkit-justify-content: space-around;
   display: flex;
@@ -244,6 +249,13 @@ ul {
 
 #lets-connect {
   text-align: center;
+}
+
+@media screen and (max-width: 600px){
+  div {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 700px) {

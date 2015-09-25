@@ -272,6 +272,10 @@ ul {
     border-radius: 4px;
     box-shadow: 2px 2px 4px #ffee58;
   }
+
+  #mapDiv {
+    margin-bottom: 50px;
+  }
 }
 
 @media only screen and (max-width: 700px) {

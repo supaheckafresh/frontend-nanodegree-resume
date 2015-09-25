@@ -3,13 +3,13 @@ var HTMLheaderRole = '<span class="role">&emsp;%data%</span>';
 
 var HTMLdropdown = '<div class="dropdown fixed-right"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Resume Sections<span class="caret"></span></button><ul class="dropdown-menu dropdown-menu-right"><li><a href="#bioNav">Bio</a></li><li><a href="#workExperienceNav">Work Experience</a></li><li><a href="#educationNav">Education</a></li><li><a href="#onlineCoursesNav">Online Classes</a></li><li><a href="#projectsNav">Projects</a></li><li><a href="#volunteeringNav">Volunteering</a></li><li><a href="#mapNav">Map</a></li><li role="separator" class="divider"></li><li><a href="mailto:neilstrain@gmail.com">Let\'s Connect</a></li></ul></div><div><hr/></div>';
 
-var HTMLcontactGeneric = '<li class="flex-box"><span class="purple-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-box"><span class="purple-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-box"><span class="purple-text">email</span><a href="mailto:%data%"><span class="white-text">%data%</span></a></li>';
-var HTMLtwitter = '<li class="flex-box"><span class="purple-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-box"><span class="purple-text">github</span><a href="%data%" target="_blank"><span class="white-text">%data%</span></a></li>';
-var HTMLblog = '<li class="flex-box"><span class="purple-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-box"><span class="purple-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="purple-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="purple-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="purple-text">email</span><a class="span" href="mailto:%data%"><span class="white-text">%data%</span></a></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="purple-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="purple-text">github</span><a class="span" href="%data%" target="_blank"><span class="white-text">%data%</span></a></li>';
+var HTMLblog = '<li class="flex-item"><span class="purple-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="purple-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';

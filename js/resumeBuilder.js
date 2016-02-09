@@ -4,14 +4,29 @@ model.getHTML = function () {
     return model.HTML;
 };
 
-model.getResumeData = function () {
-    return {
-        bio: model.bio,
-        work: model.work,
-        education: model.education,
-        projects: model.projects,
-        volunteering: model.volunteering,
-        otherLocations: model.otherLocations
+model.getResumeData = function (section) {
+
+    switch (section) {
+        case 'bio':
+            return model.bio;
+            break;
+        case 'work':
+            return model.work;
+            break;
+        case 'eductation':
+            return model.education;
+            break;
+        case 'projects':
+            return model.projects;
+            break;
+        case 'volunteering':
+            return model.volunteering;
+            break;
+        case 'otherLocations':
+            return model.otherLocations;
+            break;
+        default:
+            console.log('Problem with resume data request');
     }
 };
 
@@ -27,8 +42,8 @@ var controller = {
         return model.getHTML();
     },
 
-    getResumeData: function () {
-        return model.getResumeData();
+    getResumeData: function (section) {
+        return model.getResumeData(section);
     }
 
 };
@@ -38,7 +53,7 @@ var controller = {
 var bioView = {
 
     init: function () {
-        this.bio = controller.getResumeData().bio;
+        this.bio = controller.getResumeData('bio');
         this.HTML = controller.getHTML();
     },
 

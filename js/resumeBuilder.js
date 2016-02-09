@@ -1,6 +1,26 @@
+//******CONTROLLER******//
+var controller = {
+    init: function () {
 
+    }
+};
 
+//******VIEWS******//
+var bioView = {
 
+};
+
+var workView = {};
+
+var educationView = {};
+
+var projectsView = {};
+
+var volunteeringView = {};
+
+var mapView = {};
+
+controller.init();
 
 
 model.bio.display = function() {

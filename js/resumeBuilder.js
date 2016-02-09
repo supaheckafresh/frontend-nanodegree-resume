@@ -34,12 +34,13 @@ model.getResumeData = function (section) {
 //******CONTROLLER******//
 var controller = {
     init: function () {
+        this.getHTML();
         bioView.init();
         bioView.display();
     },
 
     getHTML: function () {
-        return model.getHTML();
+        this.HTML = model.getHTML();
     },
 
     getResumeData: function (section) {
@@ -54,39 +55,38 @@ var bioView = {
 
     init: function () {
         this.bio = controller.getResumeData('bio');
-        this.HTML = controller.getHTML();
     },
 
     display: function () {
         if (this.bio.name.length > 0 && this.bio.role.length > 0) {
 
             // display name and role
-            var formattedRole = this.HTML.headerRole.replace("%data%", this.bio.role);
-            var formattedName = this.HTML.headerName.replace("%data%", this.bio.name);
-            prependToPage(this.HTML.dropdown, "#header");
+            var formattedRole = controller.HTML.headerRole.replace("%data%", this.bio.role);
+            var formattedName = controller.HTML.headerName.replace("%data%", this.bio.name);
+            prependToPage(controller.HTML.dropdown, "#header");
             prependToPage(formattedRole, "#header");
             prependToPage(formattedName, "#header");
 
             // display welcome message
             if (this.bio.welcomeMsg.length > 0) {
                 var formattedWelcomeMsg =
-                    this.HTML.welcomeMsg.replace("%data%", this.bio.welcomeMsg);
+                    controller.HTML.welcomeMsg.replace("%data%", this.bio.welcomeMsg);
                 appendToPage(formattedWelcomeMsg, "#header");
             }
 
             // display bio picture
             if (this.bio.bioPic.length > 0) {
-                var formattedBioPic = this.HTML.bioPic.replace("%data%", this.bio.bioPic);
+                var formattedBioPic = controller.HTML.bioPic.replace("%data%", this.bio.bioPic);
                 appendToPage(formattedBioPic, "#header");
             }
 
             // display contacts
             if (!$.isEmptyObject(this.bio.contacts)) {
-                var formattedMobile = this.HTML.mobile.replace("%data%", this.bio.contacts.mobile);
-                var formattedEmail = this.HTML.email.replace(/%data%/g, this.bio.contacts.email);
-                var formattedGithub = this.HTML.github.replace(/%data%/g, this.bio.contacts.github);
+                var formattedMobile = controller.HTML.mobile.replace("%data%", this.bio.contacts.mobile);
+                var formattedEmail = controller.HTML.email.replace(/%data%/g, this.bio.contacts.email);
+                var formattedGithub = controller.HTML.github.replace(/%data%/g, this.bio.contacts.github);
                 var formattedLocation =
-                    this.HTML.location.replace("%data%", this.bio.contacts.location);
+                    controller.HTML.location.replace("%data%", this.bio.contacts.location);
 
                 appendToPage(
                     formattedMobile +
@@ -97,21 +97,24 @@ var bioView = {
 
             // display skills
             if (this.bio.skills.length > 0) {
-                appendToPage(this.HTML.skillsStart, "#header");
+                appendToPage(controller.HTML.skillsStart, "#header");
 
                 for (var eachSkill = 0; eachSkill < this.bio.skills.length; eachSkill++) {
-                    var formattedSkill = this.HTML.skills.replace("%data%", this.bio.skills[eachSkill]);
+                    var formattedSkill = controller.HTML.skills.replace("%data%", this.bio.skills[eachSkill]);
                     appendToPage(formattedSkill, "#skills");
                 }
             }
 
             // display internationalize button
-            appendToPage(this.HTML.internationalizeButton, "#header");
+            appendToPage(controller.HTML.internationalizeButton, "#header");
         }
     }
 };
 
-var workView = {};
+var workView = {
+
+
+};
 
 var educationView = {};
 
@@ -123,12 +126,6 @@ var mapView = {};
 
 controller.init();
 
-
-model.bio.display = function() {
-
-};
-
-model.bio.display();
 
 
 model.work.display = function() {

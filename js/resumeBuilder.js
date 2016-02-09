@@ -34,9 +34,16 @@ model.getResumeData = function (section) {
 //******CONTROLLER******//
 var controller = {
     init: function () {
+        // store HTML snippets in controller and access in views with controller.HTML
         this.getHTML();
+
+        // fetch and display bio data
         bioView.init();
         bioView.display();
+
+        // fetch and display work data
+        workView.init();
+        workView.display();
     },
 
     getHTML: function () {
@@ -113,6 +120,34 @@ var bioView = {
 
 var workView = {
 
+    init: function () {
+       this.work = controller.getResumeData('work');
+    },
+
+    display: function () {
+        if (this.work.jobs.length > 0) {
+            for (var jobIndex in this.work.jobs) {
+                var eachJob = this.work.jobs[jobIndex];
+
+                appendToPage(controller.HTML.workStart, "#workExperience");
+
+                var formattedEmployer = controller.HTML.workEmployer.replace("%data%", eachJob.employer)
+                    .replace("#", eachJob.url);
+                var formattedTitle = controller.HTML.workTitle.replace("%data%", eachJob.title);
+                appendToPage(formattedEmployer + formattedTitle, ".work-entry:last");
+
+                var formattedDates = controller.HTML.workDates.replace("%data%", eachJob.dates);
+                appendToPage(formattedDates, ".work-entry:last");
+
+                var formattedLocation = controller.HTML.workLocation.replace("%data%", eachJob.location);
+                appendToPage(formattedLocation, ".work-entry:last");
+
+                var formattedDescription =
+                    controller.HTML.workDescription.replace("%data%", eachJob.description);
+                appendToPage(formattedDescription, ".work-entry:last");
+            }
+        }
+    }
 
 };
 
@@ -126,34 +161,6 @@ var mapView = {};
 
 controller.init();
 
-
-
-model.work.display = function() {
-    if (model.work.jobs.length > 0) {
-        for (var jobIndex in model.work.jobs) {
-            var eachJob = model.work.jobs[jobIndex];
-
-            appendToPage(model.HTML.workStart, "#workExperience");
-
-            var formattedEmployer = model.HTML.workEmployer.replace("%data%", eachJob.employer)
-                .replace("#", eachJob.url);
-            var formattedTitle = model.HTML.workTitle.replace("%data%", eachJob.title);
-            appendToPage(formattedEmployer + formattedTitle, ".work-entry:last");
-
-            var formattedDates = model.HTML.workDates.replace("%data%", eachJob.dates);
-            appendToPage(formattedDates, ".work-entry:last");
-
-            var formattedLocation = model.HTML.workLocation.replace("%data%", eachJob.location);
-            appendToPage(formattedLocation, ".work-entry:last");
-
-            var formattedDescription =
-                model.HTML.workDescription.replace("%data%", eachJob.description);
-            appendToPage(formattedDescription, ".work-entry:last");
-        }
-    }
-};
-
-model.work.display();
 
 
 model.education.display = function() {

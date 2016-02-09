@@ -1,3 +1,21 @@
+
+//******MODEL METHODS******//
+model.getHTML = function () {
+    return model.HTML;
+};
+
+model.getResumeData = function () {
+    return {
+        bio: model.bio,
+        work: model.work,
+        education: model.education,
+        projects: model.projects,
+        volunteering: model.volunteering,
+        otherLocations: model.otherLocations
+    }
+};
+
+
 //******CONTROLLER******//
 var controller = {
     init: function () {
@@ -7,14 +25,12 @@ var controller = {
 
     getHTML: function () {
         return model.getHTML();
+    },
+
+    getResumeData: function () {
+        return model.getResumeData();
     }
 
-};
-
-
-//******MODEL METHODS******//
-model.getHTML = function () {
-    return model.HTML;
 };
 
 
@@ -22,40 +38,40 @@ model.getHTML = function () {
 var bioView = {
 
     init: function () {
-        this.resumeData = controller.getResumeData();
+        this.bio = controller.getResumeData().bio;
         this.HTML = controller.getHTML();
     },
 
     display: function () {
-        if (model.bio.name.length > 0 && model.bio.role.length > 0) {
+        if (this.bio.name.length > 0 && this.bio.role.length > 0) {
 
             // display name and role
-            var formattedRole = this.HTML.headerRole.replace("%data%", model.bio.role);
-            var formattedName = this.HTML.headerName.replace("%data%", model.bio.name);
+            var formattedRole = this.HTML.headerRole.replace("%data%", this.bio.role);
+            var formattedName = this.HTML.headerName.replace("%data%", this.bio.name);
             prependToPage(this.HTML.dropdown, "#header");
             prependToPage(formattedRole, "#header");
             prependToPage(formattedName, "#header");
 
             // display welcome message
-            if (model.bio.welcomeMsg.length > 0) {
+            if (this.bio.welcomeMsg.length > 0) {
                 var formattedWelcomeMsg =
-                    this.HTML.welcomeMsg.replace("%data%", model.bio.welcomeMsg);
+                    this.HTML.welcomeMsg.replace("%data%", this.bio.welcomeMsg);
                 appendToPage(formattedWelcomeMsg, "#header");
             }
 
             // display bio picture
-            if (model.bio.bioPic.length > 0) {
-                var formattedBioPic = this.HTML.bioPic.replace("%data%", model.bio.bioPic);
+            if (this.bio.bioPic.length > 0) {
+                var formattedBioPic = this.HTML.bioPic.replace("%data%", this.bio.bioPic);
                 appendToPage(formattedBioPic, "#header");
             }
 
             // display contacts
-            if (!$.isEmptyObject(model.bio.contacts)) {
-                var formattedMobile = this.HTML.mobile.replace("%data%", model.bio.contacts.mobile);
-                var formattedEmail = this.HTML.email.replace(/%data%/g, model.bio.contacts.email);
-                var formattedGithub = this.HTML.github.replace(/%data%/g, model.bio.contacts.github);
+            if (!$.isEmptyObject(this.bio.contacts)) {
+                var formattedMobile = this.HTML.mobile.replace("%data%", this.bio.contacts.mobile);
+                var formattedEmail = this.HTML.email.replace(/%data%/g, this.bio.contacts.email);
+                var formattedGithub = this.HTML.github.replace(/%data%/g, this.bio.contacts.github);
                 var formattedLocation =
-                    this.HTML.location.replace("%data%", model.bio.contacts.location);
+                    this.HTML.location.replace("%data%", this.bio.contacts.location);
 
                 appendToPage(
                     formattedMobile +
@@ -65,11 +81,11 @@ var bioView = {
             }
 
             // display skills
-            if (model.bio.skills.length > 0) {
+            if (this.bio.skills.length > 0) {
                 appendToPage(this.HTML.skillsStart, "#header");
 
-                for (var eachSkill = 0; eachSkill < model.bio.skills.length; eachSkill++) {
-                    var formattedSkill = this.HTML.skills.replace("%data%", model.bio.skills[eachSkill]);
+                for (var eachSkill = 0; eachSkill < this.bio.skills.length; eachSkill++) {
+                    var formattedSkill = this.HTML.skills.replace("%data%", this.bio.skills[eachSkill]);
                     appendToPage(formattedSkill, "#skills");
                 }
             }

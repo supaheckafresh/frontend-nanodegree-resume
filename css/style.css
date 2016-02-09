@@ -272,20 +272,20 @@ li:hover {
 
     #mapDiv {
         margin-bottom: 50px;
-    };
+    }
 }
 
 @media only screen and (max-width: 700px) {
     #name {
         display: block;
-    };
+    }
 }
 
 @media only screen and (min-width: 750px) {
     #skills-h3,
   .biopic {
         display: block;
-    };
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -299,17 +299,17 @@ li:hover {
 
     .welcome-message {
         display: none;
-    };
+    }
 }
 
 @media only screen and (max-width:900px) {
     .biopic {
         width: 175px;
-    };
+    }
 }
 
 @media only screen and (max-width: 1024px) {
     #lets-connect {
         margin-top: 5%;
-    };
+    }
 }

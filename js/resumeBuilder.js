@@ -1,3 +1,8 @@
+
+
+
+
+
 bio.display = function() {
     if (bio.name.length > 0 && bio.role.length > 0) {
 

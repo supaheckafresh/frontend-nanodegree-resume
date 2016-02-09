@@ -42,12 +42,14 @@ var controller = {
         workView.init();
         educationView.init();
         projectsView.init();
+        volunteeringView.init();
 
         // display sections
         bioView.display();
         workView.display();
         educationView.display();
         projectsView.display();
+        volunteeringView.display();
     },
 
     getHTML: function () {
@@ -247,6 +249,29 @@ var volunteeringView = {
 
     init: function () {
         this.volunteering = controller.getResumeData('volunteering');
+    },
+
+    display: function () {
+        if (this.volunteering.activities.length > 0) {
+            appendToPage(controller.HTML.volunteeringStart, "#volunteering");
+            for (var activityIndex in this.volunteering.activities) {
+                var activity = this.volunteering.activities[activityIndex];
+                var formattedTitle =
+                    controller.HTML.volunteeringTitle.replace("%data%", activity.title)
+                        .replace("#", activity.url);
+                var formattedDates =
+                    controller.HTML.volunteeringDates.replace("%data%", activity.dates);
+                var formattedLocation =
+                    controller.HTML.volunteeringLocation.replace("%data%", activity.location);
+                var formattedDescription =
+                    controller.HTML.volunteeringDescription.replace("%data%", activity.description);
+
+                appendToPage(formattedTitle +
+                    formattedDates +
+                    formattedLocation +
+                    formattedDescription, ".volunteering-entry:last");
+            }
+        }
     }
 };
 
@@ -259,31 +284,6 @@ var mapView = {
 
 controller.init();
 
-
-model.volunteering.display = function() {
-    if (model.volunteering.activities.length > 0) {
-        appendToPage(model.HTML.volunteeringStart, "#volunteering");
-        for (var activityIndex in model.volunteering.activities) {
-            var activity = model.volunteering.activities[activityIndex];
-            var formattedTitle =
-                model.HTML.volunteeringTitle.replace("%data%", activity.title)
-                .replace("#", activity.url);
-            var formattedDates =
-                model.HTML.volunteeringDates.replace("%data%", activity.dates);
-            var formattedLocation =
-                model.HTML.volunteeringLocation.replace("%data%", activity.location);
-            var formattedDescription =
-                model.HTML.volunteeringDescription.replace("%data%", activity.description);
-
-            appendToPage(formattedTitle +
-                formattedDates +
-                formattedLocation +
-                formattedDescription, ".volunteering-entry:last");
-        }
-    }
-};
-
-model.volunteering.display();
 
 //not encapsulating because there is no map JSON object.
 function displayMap() {

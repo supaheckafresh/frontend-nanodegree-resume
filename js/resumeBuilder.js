@@ -8,6 +8,14 @@ var controller = {
 //******VIEWS******//
 var bioView = {
 
+    init: function () {
+
+    },
+
+    display: function () {
+
+    }
+
 };
 
 var workView = {};
@@ -26,9 +34,9 @@ controller.init();
 model.bio.display = function() {
     if (model.bio.name.length > 0 && model.bio.role.length > 0) {
 
-        var formattedRole = HTMLheaderRole.replace("%data%", model.bio.role);
-        var formattedName = HTMLheaderName.replace("%data%", model.bio.name);
-        prependToPage(HTMLdropdown, "#header");
+        var formattedRole = headerRole.replace("%data%", model.bio.role);
+        var formattedName = headerName.replace("%data%", model.bio.name);
+        prependToPage(dropdown, "#header");
         prependToPage(formattedRole, "#header");
         prependToPage(formattedName, "#header");
 
@@ -36,12 +44,12 @@ model.bio.display = function() {
 
         if (model.bio.welcomeMsg.length > 0) {
             var formattedWelcomeMsg =
-                HTMLwelcomeMsg.replace("%data%", model.bio.welcomeMsg);
+                welcomeMsg.replace("%data%", model.bio.welcomeMsg);
             appendToPage(formattedWelcomeMsg, "#header");
         }
 
         if (model.bio.bioPic.length > 0) {
-            var formattedBioPic = HTMLbioPic.replace("%data%", model.bio.bioPic);
+            var formattedBioPic = bioPic.replace("%data%", model.bio.bioPic);
             appendToPage(formattedBioPic, "#header");
         }
 
@@ -52,11 +60,11 @@ model.bio.display = function() {
 
     function displayContacts() {
         if (!$.isEmptyObject(model.bio.contacts)) {
-            var formattedMobile = HTMLmobile.replace("%data%", model.bio.contacts.mobile);
-            var formattedEmail = HTMLemail.replace(/%data%/g, model.bio.contacts.email);
-            var formattedGithub = HTMLgithub.replace(/%data%/g, model.bio.contacts.github);
+            var formattedMobile = mobile.replace("%data%", model.bio.contacts.mobile);
+            var formattedEmail = email.replace(/%data%/g, model.bio.contacts.email);
+            var formattedGithub = github.replace(/%data%/g, model.bio.contacts.github);
             var formattedLocation =
-                HTMLlocation.replace("%data%", model.bio.contacts.location);
+                location.replace("%data%", model.bio.contacts.location);
 
             appendToPage(
                 formattedMobile +
@@ -68,10 +76,10 @@ model.bio.display = function() {
 
     function displaySkills() {
         if (model.bio.skills.length > 0) {
-            appendToPage(HTMLskillsStart, "#header");
+            appendToPage(skillsStart, "#header");
 
             for (var eachSkill = 0; eachSkill < model.bio.skills.length; eachSkill++) {
-                var formattedSkill = HTMLskills.replace("%data%", model.bio.skills[eachSkill]);
+                var formattedSkill = skills.replace("%data%", model.bio.skills[eachSkill]);
                 appendToPage(formattedSkill, "#skills");
             }
         }
@@ -90,21 +98,21 @@ model.work.display = function() {
         for (var jobIndex in model.work.jobs) {
             var eachJob = model.work.jobs[jobIndex];
 
-            appendToPage(HTMLworkStart, "#workExperience");
+            appendToPage(workStart, "#workExperience");
 
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", eachJob.employer)
+            var formattedEmployer = workEmployer.replace("%data%", eachJob.employer)
                 .replace("#", eachJob.url);
-            var formattedTitle = HTMLworkTitle.replace("%data%", eachJob.title);
+            var formattedTitle = workTitle.replace("%data%", eachJob.title);
             appendToPage(formattedEmployer + formattedTitle, ".work-entry:last");
 
-            var formattedDates = HTMLworkDates.replace("%data%", eachJob.dates);
+            var formattedDates = workDates.replace("%data%", eachJob.dates);
             appendToPage(formattedDates, ".work-entry:last");
 
-            var formattedLocation = HTMLworkLocation.replace("%data%", eachJob.location);
+            var formattedLocation = workLocation.replace("%data%", eachJob.location);
             appendToPage(formattedLocation, ".work-entry:last");
 
             var formattedDescription =
-                HTMLworkDescription.replace("%data%", eachJob.description);
+                workDescription.replace("%data%", eachJob.description);
             appendToPage(formattedDescription, ".work-entry:last");
         }
     }
@@ -115,15 +123,15 @@ model.work.display();
 
 model.education.display = function() {
     if (model.education.schools.length > 0) {
-        appendToPage(HTMLschoolStart, "#education");
+        appendToPage(schoolStart, "#education");
         for (var schoolIndex in model.education.schools) {
             var school = model.education.schools[schoolIndex];
-            var formattedName = HTMLschoolName.replace("%data%", school.name)
+            var formattedName = schoolName.replace("%data%", school.name)
                 .replace("#", school.url);
-            var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree[schoolIndex]);
-            var formattedMajor = HTMLschoolMajor.replace("%data%", school.major[schoolIndex]);
-            var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
-            var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+            var formattedDegree = schoolDegree.replace("%data%", school.degree[schoolIndex]);
+            var formattedMajor = schoolMajor.replace("%data%", school.major[schoolIndex]);
+            var formattedLocation = schoolLocation.replace("%data%", school.location);
+            var formattedDates = schoolDates.replace("%data%", school.dates);
 
             appendToPage(formattedName +
                 formattedDegree +
@@ -134,15 +142,15 @@ model.education.display = function() {
     }
 
     if (model.education.onlineCourses.length > 0) {
-        appendToPage(HTMLonlineSchoolStart, "#onlineCourses");
+        appendToPage(onlineSchoolStart, "#onlineCourses");
         for (var courseIndex in model.education.onlineCourses) {
             var course = model.education.onlineCourses[courseIndex];
-            var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
-            var formattedTitle = HTMLonlineTitle.replace("%data%", course.title)
+            var formattedSchool = onlineSchool.replace("%data%", course.school);
+            var formattedTitle = onlineTitle.replace("%data%", course.title)
                 .replace("#", course.url);
             var formattedOnlineDates =
-                HTMLonlineDates.replace("%data%", course.dates);
-            var formattedURL = HTMLonlineURL.replace("%data%", course.url)
+                onlineDates.replace("%data%", course.dates);
+            var formattedURL = onlineURL.replace("%data%", course.url)
                 .replace("#", course.url);
 
             appendToPage(formattedTitle +
@@ -161,23 +169,23 @@ model.projects.display = function() {
         for (var projIndex in model.projects.projects) {
             var project = model.projects.projects[projIndex];
 
-            appendToPage(HTMLprojectStart, "#projects");
+            appendToPage(projectStart, "#projects");
 
-            var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+            var formattedTitle = projectTitle.replace("%data%", project.title);
             appendToPage(formattedTitle, ".project-entry:last");
 
-            var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+            var formattedDates = projectDates.replace("%data%", project.dates);
             appendToPage(formattedDates, ".project-entry:last");
 
             var formattedDesc =
-                HTMLprojectDescription.replace("%data%", project.description);
+                projectDescription.replace("%data%", project.description);
             appendToPage(formattedDesc, ".project-entry:last");
 
             if (project.images.length > 0) {
                 for (var imageIndex in project.images) {
                     var image = project.images[imageIndex];
                     if (image.indexOf("images/") != -1) {
-                        var formattedImage = HTMLprojectImage.replace("%data%", image);
+                        var formattedImage = projectImage.replace("%data%", image);
                         appendToPage(formattedImage, ".project-entry:last");
                     } else {
                         var iFrame = image;
@@ -194,18 +202,18 @@ model.projects.display();
 
 model.volunteering.display = function() {
     if (model.volunteering.activities.length > 0) {
-        appendToPage(HTMLvolunteeringStart, "#volunteering");
+        appendToPage(volunteeringStart, "#volunteering");
         for (var activityIndex in model.volunteering.activities) {
             var activity = model.volunteering.activities[activityIndex];
             var formattedTitle =
-                HTMLvolunteeringTitle.replace("%data%", activity.title)
+                volunteeringTitle.replace("%data%", activity.title)
                 .replace("#", activity.url);
             var formattedDates =
-                HTMLvolunteeringDates.replace("%data%", activity.dates);
+                volunteeringDates.replace("%data%", activity.dates);
             var formattedLocation =
-                HTMLvolunteeringLocation.replace("%data%", activity.location);
+                volunteeringLocation.replace("%data%", activity.location);
             var formattedDescription =
-                HTMLvolunteeringDescription.replace("%data%", activity.description);
+                volunteeringDescription.replace("%data%", activity.description);
 
             appendToPage(formattedTitle +
                 formattedDates +

@@ -50,6 +50,7 @@ var controller = {
         educationView.display();
         projectsView.display();
         volunteeringView.display();
+        mapView.display();
     },
 
     getHTML: function () {
@@ -277,17 +278,9 @@ var volunteeringView = {
 
 var mapView = {
 
-    init: function () {
-        this.mapData = controller.getResumeData('otherLocations');
+    display: function () {
+        appendToPage(model.HTML.googleMap, "#mapDiv");
     }
 };
 
 controller.init();
-
-
-//not encapsulating because there is no map JSON object.
-function displayMap() {
-    appendToPage(model.HTML.googleMap, "#mapDiv");
-}
-
-displayMap();

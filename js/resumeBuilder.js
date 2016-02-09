@@ -13,7 +13,7 @@ model.getResumeData = function (section) {
         case 'work':
             return model.work;
             break;
-        case 'eductation':
+        case 'education':
             return model.education;
             break;
         case 'projects':
@@ -37,13 +37,17 @@ var controller = {
         // store HTML snippets in controller and access in views with controller.HTML
         this.getHTML();
 
-        // fetch and display bio data
+        // fetch resume data for each section
         bioView.init();
-        bioView.display();
-
-        // fetch and display work data
         workView.init();
+        educationView.init();
+        projectsView.init();
+
+        // display sections
+        bioView.display();
         workView.display();
+        educationView.display();
+        projectsView.display();
     },
 
     getHTML: function () {
@@ -155,103 +159,83 @@ var educationView = {
 
     init: function () {
         this.education = controller.getResumeData('education');
+    },
+
+    display: function () {
+        if (this.education.schools.length > 0) {
+            appendToPage(controller.HTML.schoolStart, "#education");
+            for (var schoolIndex in this.education.schools) {
+                var school = this.education.schools[schoolIndex];
+                var formattedName = controller.HTML.schoolName.replace("%data%", school.name)
+                    .replace("#", school.url);
+                var formattedDegree = controller.HTML.schoolDegree.replace("%data%", school.degree[schoolIndex]);
+                var formattedMajor = controller.HTML.schoolMajor.replace("%data%", school.major[schoolIndex]);
+                var formattedLocation = controller.HTML.schoolLocation.replace("%data%", school.location);
+                var formattedDates = controller.HTML.schoolDates.replace("%data%", school.dates);
+
+                appendToPage(formattedName +
+                    formattedDegree +
+                    formattedLocation +
+                    formattedDates +
+                    formattedMajor, ".education-entry:last");
+            }
+        }
+
+        if (this.education.onlineCourses.length > 0) {
+            appendToPage(controller.HTML.onlineSchoolStart, "#onlineCourses");
+            for (var courseIndex in this.education.onlineCourses) {
+                var course = this.education.onlineCourses[courseIndex];
+                var formattedSchool = controller.HTML.onlineSchool.replace("%data%", course.school);
+                var formattedTitle = controller.HTML.onlineTitle.replace("%data%", course.title)
+                    .replace("#", course.url);
+                var formattedOnlineDates =
+                    controller.HTML.onlineDates.replace("%data%", course.dates);
+                var formattedURL = controller.HTML.onlineURL.replace("%data%", course.url)
+                    .replace("#", course.url);
+
+                appendToPage(formattedTitle +
+                    formattedSchool +
+                    formattedOnlineDates +
+                    formattedURL, ".online-education-entry:last");
+            }
+        }
     }
 };
 
 var projectsView = {
 
     init: function () {
-        this.education = controller.getResumeData('projects');
-    }
-};
+        this.projects = controller.getResumeData('projects');
+    },
 
-var volunteeringView = {
+    display: function () {
+        if (this.projects.projects.length > 0) {
+            for (var projIndex in this.projects.projects) {
+                var project = this.projects.projects[projIndex];
 
-    init: function () {
-        this.education = controller.getResumeData('volunteering');
-    }
-};
+                appendToPage(controller.HTML.projectStart, "#projects");
 
-var mapView = {
+                var formattedTitle = controller.HTML.projectTitle.replace("%data%", project.title);
+                appendToPage(formattedTitle, ".project-entry:last");
 
-    init: function () {
-        this.education = controller.getResumeData('otherLocations');
-    }
-};
+                var formattedDates = controller.HTML.projectDates.replace("%data%", project.dates);
+                appendToPage(formattedDates, ".project-entry:last");
 
-controller.init();
+                var formattedDesc =
+                    controller.HTML.projectDescription.replace("%data%", project.description);
+                appendToPage(formattedDesc, ".project-entry:last");
 
-
-
-model.education.display = function() {
-    if (model.education.schools.length > 0) {
-        appendToPage(model.HTML.schoolStart, "#education");
-        for (var schoolIndex in model.education.schools) {
-            var school = model.education.schools[schoolIndex];
-            var formattedName = model.HTML.schoolName.replace("%data%", school.name)
-                .replace("#", school.url);
-            var formattedDegree = model.HTML.schoolDegree.replace("%data%", school.degree[schoolIndex]);
-            var formattedMajor = model.HTML.schoolMajor.replace("%data%", school.major[schoolIndex]);
-            var formattedLocation = model.HTML.schoolLocation.replace("%data%", school.location);
-            var formattedDates = model.HTML.schoolDates.replace("%data%", school.dates);
-
-            appendToPage(formattedName +
-                formattedDegree +
-                formattedLocation +
-                formattedDates +
-                formattedMajor, ".education-entry:last");
-        }
-    }
-
-    if (model.education.onlineCourses.length > 0) {
-        appendToPage(model.HTML.onlineSchoolStart, "#onlineCourses");
-        for (var courseIndex in model.education.onlineCourses) {
-            var course = model.education.onlineCourses[courseIndex];
-            var formattedSchool = model.HTML.onlineSchool.replace("%data%", course.school);
-            var formattedTitle = model.HTML.onlineTitle.replace("%data%", course.title)
-                .replace("#", course.url);
-            var formattedOnlineDates =
-                model.HTML.onlineDates.replace("%data%", course.dates);
-            var formattedURL = model.HTML.onlineURL.replace("%data%", course.url)
-                .replace("#", course.url);
-
-            appendToPage(formattedTitle +
-                formattedSchool +
-                formattedOnlineDates +
-                formattedURL, ".online-education-entry:last");
-        }
-    }
-};
-
-model.education.display();
-
-
-model.projects.display = function() {
-    if (model.projects.projects.length > 0) {
-        for (var projIndex in model.projects.projects) {
-            var project = model.projects.projects[projIndex];
-
-            appendToPage(model.HTML.projectStart, "#projects");
-
-            var formattedTitle = model.HTML.projectTitle.replace("%data%", project.title);
-            appendToPage(formattedTitle, ".project-entry:last");
-
-            var formattedDates = model.HTML.projectDates.replace("%data%", project.dates);
-            appendToPage(formattedDates, ".project-entry:last");
-
-            var formattedDesc =
-                model.HTML.projectDescription.replace("%data%", project.description);
-            appendToPage(formattedDesc, ".project-entry:last");
-
-            if (project.images.length > 0) {
-                for (var imageIndex in project.images) {
-                    var image = project.images[imageIndex];
-                    if (image.indexOf("images/") != -1) {
-                        var formattedImage = model.HTML.projectImage.replace("%data%", image);
-                        appendToPage(formattedImage, ".project-entry:last");
-                    } else {
-                        var iFrame = image;
-                        appendToPage(iFrame, ".project-entry:last");
+                if (project.images.length > 0) {
+                    for (var imageIndex in project.images) {
+                        var image = project.images[imageIndex];
+                        if (image.indexOf("images/") != -1) {
+                            var formattedImage = controller.HTML.projectImage.replace("%data%", image);
+                            appendToPage(formattedImage, ".project-entry:last");
+                        } else {
+                            // if image url doesn't contain "images/" then append unchanged iframe html
+                            var iFrame = image;
+                            appendToPage(iFrame, ".project-entry:last");
+                        }
                     }
                 }
             }
@@ -259,7 +243,21 @@ model.projects.display = function() {
     }
 };
 
-model.projects.display();
+var volunteeringView = {
+
+    init: function () {
+        this.volunteering = controller.getResumeData('volunteering');
+    }
+};
+
+var mapView = {
+
+    init: function () {
+        this.mapData = controller.getResumeData('otherLocations');
+    }
+};
+
+controller.init();
 
 
 model.volunteering.display = function() {

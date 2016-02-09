@@ -1,5 +1,5 @@
 
-//******MODEL******//
+//******MODEL DATA******//
 var model = {
 
         bio: {

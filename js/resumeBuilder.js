@@ -1,21 +1,83 @@
 //******CONTROLLER******//
 var controller = {
     init: function () {
+        bioView.init();
+        bioView.display();
+    },
 
+    getHTML: function () {
+        return model.getHTML();
     }
+
 };
+
+
+//******MODEL METHODS******//
+model.getHTML = function () {
+    return model.HTML;
+};
+
 
 //******VIEWS******//
 var bioView = {
 
     init: function () {
-
+        this.resumeData = controller.getResumeData();
+        this.HTML = controller.getHTML();
     },
 
     display: function () {
+        if (model.bio.name.length > 0 && model.bio.role.length > 0) {
 
+            // display name and role
+            var formattedRole = this.HTML.headerRole.replace("%data%", model.bio.role);
+            var formattedName = this.HTML.headerName.replace("%data%", model.bio.name);
+            prependToPage(this.HTML.dropdown, "#header");
+            prependToPage(formattedRole, "#header");
+            prependToPage(formattedName, "#header");
+
+            // display welcome message
+            if (model.bio.welcomeMsg.length > 0) {
+                var formattedWelcomeMsg =
+                    this.HTML.welcomeMsg.replace("%data%", model.bio.welcomeMsg);
+                appendToPage(formattedWelcomeMsg, "#header");
+            }
+
+            // display bio picture
+            if (model.bio.bioPic.length > 0) {
+                var formattedBioPic = this.HTML.bioPic.replace("%data%", model.bio.bioPic);
+                appendToPage(formattedBioPic, "#header");
+            }
+
+            // display contacts
+            if (!$.isEmptyObject(model.bio.contacts)) {
+                var formattedMobile = this.HTML.mobile.replace("%data%", model.bio.contacts.mobile);
+                var formattedEmail = this.HTML.email.replace(/%data%/g, model.bio.contacts.email);
+                var formattedGithub = this.HTML.github.replace(/%data%/g, model.bio.contacts.github);
+                var formattedLocation =
+                    this.HTML.location.replace("%data%", model.bio.contacts.location);
+
+                appendToPage(
+                    formattedMobile +
+                    formattedEmail +
+                    formattedGithub +
+                    formattedLocation, "#topContacts", "#footerContacts");
+            }
+
+            // display skills
+            if (model.bio.skills.length > 0) {
+                appendToPage(this.HTML.skillsStart, "#header");
+
+                for (var eachSkill = 0; eachSkill < model.bio.skills.length; eachSkill++) {
+                    var formattedSkill = this.HTML.skills.replace("%data%", model.bio.skills[eachSkill]);
+                    appendToPage(formattedSkill, "#skills");
+                }
+            }
+
+            // display internationalize button
+            appendToPage(this.HTML.internationalizeButton, "#header");
+        }
     }
-
 };
 
 var workView = {};
@@ -32,62 +94,7 @@ controller.init();
 
 
 model.bio.display = function() {
-    if (model.bio.name.length > 0 && model.bio.role.length > 0) {
 
-        var formattedRole = model.HTML.headerRole.replace("%data%", model.bio.role);
-        var formattedName = model.HTML.headerName.replace("%data%", model.bio.name);
-        prependToPage(model.HTML.dropdown, "#header");
-        prependToPage(formattedRole, "#header");
-        prependToPage(formattedName, "#header");
-
-        displayContacts();
-
-        if (model.bio.welcomeMsg.length > 0) {
-            var formattedWelcomeMsg =
-                model.HTML.welcomeMsg.replace("%data%", model.bio.welcomeMsg);
-            appendToPage(formattedWelcomeMsg, "#header");
-        }
-
-        if (model.bio.bioPic.length > 0) {
-            var formattedBioPic = model.HTML.bioPic.replace("%data%", model.bio.bioPic);
-            appendToPage(formattedBioPic, "#header");
-        }
-
-        displaySkills();
-        displayInternationalizeButton();
-    }
-
-
-    function displayContacts() {
-        if (!$.isEmptyObject(model.bio.contacts)) {
-            var formattedMobile = model.HTML.mobile.replace("%data%", model.bio.contacts.mobile);
-            var formattedEmail = model.HTML.email.replace(/%data%/g, model.bio.contacts.email);
-            var formattedGithub = model.HTML.github.replace(/%data%/g, model.bio.contacts.github);
-            var formattedLocation =
-                model.HTML.location.replace("%data%", model.bio.contacts.location);
-
-            appendToPage(
-                formattedMobile +
-                formattedEmail +
-                formattedGithub +
-                formattedLocation, "#topContacts", "#footerContacts");
-        }
-    }
-
-    function displaySkills() {
-        if (model.bio.skills.length > 0) {
-            appendToPage(model.HTML.skillsStart, "#header");
-
-            for (var eachSkill = 0; eachSkill < model.bio.skills.length; eachSkill++) {
-                var formattedSkill = model.HTML.skills.replace("%data%", model.bio.skills[eachSkill]);
-                appendToPage(formattedSkill, "#skills");
-            }
-        }
-    }
-
-    function displayInternationalizeButton() {
-        appendToPage(model.HTML.internationalizeButton, "#header");
-    }
 };
 
 model.bio.display();

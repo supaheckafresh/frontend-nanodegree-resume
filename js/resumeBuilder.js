@@ -3,25 +3,25 @@
 
 
 
-bio.display = function() {
-    if (bio.name.length > 0 && bio.role.length > 0) {
+model.bio.display = function() {
+    if (model.bio.name.length > 0 && model.bio.role.length > 0) {
 
-        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-        var formattedName = HTMLheaderName.replace("%data%", bio.name);
+        var formattedRole = HTMLheaderRole.replace("%data%", model.bio.role);
+        var formattedName = HTMLheaderName.replace("%data%", model.bio.name);
         prependToPage(HTMLdropdown, "#header");
         prependToPage(formattedRole, "#header");
         prependToPage(formattedName, "#header");
 
         displayContacts();
 
-        if (bio.welcomeMsg.length > 0) {
+        if (model.bio.welcomeMsg.length > 0) {
             var formattedWelcomeMsg =
-                HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+                HTMLwelcomeMsg.replace("%data%", model.bio.welcomeMsg);
             appendToPage(formattedWelcomeMsg, "#header");
         }
 
-        if (bio.bioPic.length > 0) {
-            var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+        if (model.bio.bioPic.length > 0) {
+            var formattedBioPic = HTMLbioPic.replace("%data%", model.bio.bioPic);
             appendToPage(formattedBioPic, "#header");
         }
 
@@ -31,12 +31,12 @@ bio.display = function() {
 
 
     function displayContacts() {
-        if (!$.isEmptyObject(bio.contacts)) {
-            var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-            var formattedEmail = HTMLemail.replace(/%data%/g, bio.contacts.email);
-            var formattedGithub = HTMLgithub.replace(/%data%/g, bio.contacts.github);
+        if (!$.isEmptyObject(model.bio.contacts)) {
+            var formattedMobile = HTMLmobile.replace("%data%", model.bio.contacts.mobile);
+            var formattedEmail = HTMLemail.replace(/%data%/g, model.bio.contacts.email);
+            var formattedGithub = HTMLgithub.replace(/%data%/g, model.bio.contacts.github);
             var formattedLocation =
-                HTMLlocation.replace("%data%", bio.contacts.location);
+                HTMLlocation.replace("%data%", model.bio.contacts.location);
 
             appendToPage(
                 formattedMobile +
@@ -47,11 +47,11 @@ bio.display = function() {
     }
 
     function displaySkills() {
-        if (bio.skills.length > 0) {
+        if (model.bio.skills.length > 0) {
             appendToPage(HTMLskillsStart, "#header");
 
-            for (var eachSkill = 0; eachSkill < bio.skills.length; eachSkill++) {
-                var formattedSkill = HTMLskills.replace("%data%", bio.skills[eachSkill]);
+            for (var eachSkill = 0; eachSkill < model.bio.skills.length; eachSkill++) {
+                var formattedSkill = HTMLskills.replace("%data%", model.bio.skills[eachSkill]);
                 appendToPage(formattedSkill, "#skills");
             }
         }
@@ -62,13 +62,13 @@ bio.display = function() {
     }
 };
 
-bio.display();
+model.bio.display();
 
 
-work.display = function() {
-    if (work.jobs.length > 0) {
-        for (var jobIndex in work.jobs) {
-            var eachJob = work.jobs[jobIndex];
+model.work.display = function() {
+    if (model.work.jobs.length > 0) {
+        for (var jobIndex in model.work.jobs) {
+            var eachJob = model.work.jobs[jobIndex];
 
             appendToPage(HTMLworkStart, "#workExperience");
 
@@ -90,14 +90,14 @@ work.display = function() {
     }
 };
 
-work.display();
+model.work.display();
 
 
-education.display = function() {
-    if (education.schools.length > 0) {
+model.education.display = function() {
+    if (model.education.schools.length > 0) {
         appendToPage(HTMLschoolStart, "#education");
-        for (var schoolIndex in education.schools) {
-            var school = education.schools[schoolIndex];
+        for (var schoolIndex in model.education.schools) {
+            var school = model.education.schools[schoolIndex];
             var formattedName = HTMLschoolName.replace("%data%", school.name)
                 .replace("#", school.url);
             var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree[schoolIndex]);
@@ -113,10 +113,10 @@ education.display = function() {
         }
     }
 
-    if (education.onlineCourses.length > 0) {
+    if (model.education.onlineCourses.length > 0) {
         appendToPage(HTMLonlineSchoolStart, "#onlineCourses");
-        for (var courseIndex in education.onlineCourses) {
-            var course = education.onlineCourses[courseIndex];
+        for (var courseIndex in model.education.onlineCourses) {
+            var course = model.education.onlineCourses[courseIndex];
             var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
             var formattedTitle = HTMLonlineTitle.replace("%data%", course.title)
                 .replace("#", course.url);
@@ -133,13 +133,13 @@ education.display = function() {
     }
 };
 
-education.display();
+model.education.display();
 
 
-projects.display = function() {
-    if (projects.projects.length > 0) {
-        for (var projIndex in projects.projects) {
-            var project = projects.projects[projIndex];
+model.projects.display = function() {
+    if (model.projects.projects.length > 0) {
+        for (var projIndex in model.projects.projects) {
+            var project = model.projects.projects[projIndex];
 
             appendToPage(HTMLprojectStart, "#projects");
 
@@ -169,14 +169,14 @@ projects.display = function() {
     }
 };
 
-projects.display();
+model.projects.display();
 
 
-volunteering.display = function() {
-    if (volunteering.activities.length > 0) {
+model.volunteering.display = function() {
+    if (model.volunteering.activities.length > 0) {
         appendToPage(HTMLvolunteeringStart, "#volunteering");
-        for (var activityIndex in volunteering.activities) {
-            var activity = volunteering.activities[activityIndex];
+        for (var activityIndex in model.volunteering.activities) {
+            var activity = model.volunteering.activities[activityIndex];
             var formattedTitle =
                 HTMLvolunteeringTitle.replace("%data%", activity.title)
                 .replace("#", activity.url);
@@ -195,7 +195,7 @@ volunteering.display = function() {
     }
 };
 
-volunteering.display();
+model.volunteering.display();
 
 //not encapsulating because there is no map JSON object.
 function displayMap() {

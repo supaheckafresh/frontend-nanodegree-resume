@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d623c9-2a58-4ca2-b758-2987cd82d770" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helper.js" afterPath="$PROJECT_DIR$/js/helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resumeBuilder.js" afterPath="$PROJECT_DIR$/js/resumeBuilder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resumeData.js" afterPath="$PROJECT_DIR$/js/resumeData.js" />
     </list>
     <ignored path="frontend-nanodegree-resume.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,28 +38,28 @@
       <file leaf-file-name="resumeBuilder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/resumeBuilder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-25.137932">
+              <caret line="201" column="23" selection-start-line="201" selection-start-column="17" selection-end-line="201" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resumeData.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="resumeData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/resumeData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.0775862">
-              <caret line="168" column="19" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
+            <state vertical-scroll-proportion="-23.37931">
+              <caret line="172" column="19" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="helper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="13" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="13" />
+            <state vertical-scroll-proportion="-1.0517242">
+              <caret line="172" column="37" selection-start-line="172" selection-start-column="37" selection-end-line="172" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -68,8 +68,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.807693">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state vertical-scroll-proportion="-9.846154">
+              <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -86,8 +86,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/resumeBuilder.js" />
         <option value="$PROJECT_DIR$/js/resumeData.js" />
+        <option value="$PROJECT_DIR$/js/resumeBuilder.js" />
+        <option value="$PROJECT_DIR$/js/helper.js" />
       </list>
     </option>
   </component>
@@ -352,18 +353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="13" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.807693">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        <state vertical-scroll-proportion="-9.846154">
+          <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
@@ -372,16 +365,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/resumeBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-25.137932">
+          <caret line="201" column="23" selection-start-line="201" selection-start-column="17" selection-end-line="201" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/resumeData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.0775862">
-          <caret line="168" column="19" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
+        <state vertical-scroll-proportion="-23.37931">
+          <caret line="172" column="19" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0517242">
+          <caret line="172" column="37" selection-start-line="172" selection-start-column="37" selection-end-line="172" selection-end-column="37" />
           <folding />
         </state>
       </provider>

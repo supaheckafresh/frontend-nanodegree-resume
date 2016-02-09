@@ -99,7 +99,7 @@ function initializeMap() {
 
         // iterates through school locations and appends each location to
         // the locations array
-        if (education.schools.length > 0) {
+        if (model.education.schools.length > 0) {
             for (var school in model.education.schools) {
                 locations.push(model.education.schools[school].location);
             }

@@ -151,13 +151,33 @@ var workView = {
 
 };
 
-var educationView = {};
+var educationView = {
 
-var projectsView = {};
+    init: function () {
+        this.education = controller.getResumeData('education');
+    }
+};
 
-var volunteeringView = {};
+var projectsView = {
 
-var mapView = {};
+    init: function () {
+        this.education = controller.getResumeData('projects');
+    }
+};
+
+var volunteeringView = {
+
+    init: function () {
+        this.education = controller.getResumeData('volunteering');
+    }
+};
+
+var mapView = {
+
+    init: function () {
+        this.education = controller.getResumeData('otherLocations');
+    }
+};
 
 controller.init();
 
